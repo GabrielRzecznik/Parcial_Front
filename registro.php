@@ -24,13 +24,18 @@
                     <br>
                     <input type="text" class="form-control inputs" name="usuario" id="usuario">
                     <br>
+                    <!--Correo-->
+                    <span class="texto">Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <br>
+                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
+                    <br>
                     <!--Contraseña-->
                     <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
                     <input type="password" class="form-control inputs" name="contraseña" id="contraseña">
                     <br>
                     <!--Confirma Contraseña-->
-                    <span class="texto">Confirma Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Confirme Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
                     <input type="password" class="form-control inputs" name="confirmaContraseña" id="confirmaContraseña">
                     <br>
@@ -53,13 +58,9 @@
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCont">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Contraseña:</strong>
-                        La contraseña debe tener de 8 a 16 caracteres.
-                        <br>Debe contener al menos una "mayuscula" y un "digito".
+                        Las contraseña no coinciden.
                     </div>
-                </form> 
-            </div>
-            <div class="col-md-4 colorear1">
-                <div class="centrado"> 
+                    <div class="centrado"> 
                     <button type="submit" class="boton btn btn-secondary" name="boton" id="boton">
                         <span id="loguearse">Crear Usuario</span>
                         <span class="invisible" id="cargando">
@@ -79,6 +80,9 @@
                     <br><br>
                     <a class="registro" href="index.php">Volver Atrás</a>    
                 </div>
+                </form> 
+            </div>
+            <div class="col-md-4 colorear1">
             </div>
             <div class="col-md-2"></div>
             <div class="espaciado"></div>
