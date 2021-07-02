@@ -4,7 +4,7 @@
 }
 
 body{
-    background: url('../../Backend/img/fondo2.jpg');
+    background: url('../img/fondo2.jpg');
     width: auto;
     height: auto;
     background-position: center;
@@ -22,13 +22,13 @@ body{
 }
 
 .colorear2{
-    background: url('../../Backend/img/ferrari.jpg');
+    background: url('../img/ferrari.jpg');
     background-position: center;
     background-size: cover;
 }
 
 .colorear3{
-  background: url('../../Backend/img/fondo3.jpg');
+  background: url('../img/fondo3.jpg');
   background-position: center;
   background-size: cover;
 }
