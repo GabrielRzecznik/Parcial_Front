@@ -33,6 +33,12 @@ body{
   background-size: cover;
 }
 
+.colorear4{
+  background: url('../img/ferrari2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .registro{
   color: rgb(255, 185, 93);
   text-decoration: none;

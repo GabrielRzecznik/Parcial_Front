@@ -82,7 +82,7 @@
                 </div>
                 </form> 
             </div>
-            <div class="col-md-4 colorear1">
+            <div class="col-md-4 colorear4">
             </div>
             <div class="col-md-2"></div>
             <div class="espaciado"></div>
