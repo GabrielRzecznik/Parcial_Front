@@ -39,6 +39,11 @@
                     <br>
                     <input type="password" class="form-control inputs" name="confirmaContraseña" id="confirmaContraseña">
                     <br>
+                    <!--Foto-->
+                    <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <br>
+                    <input type="password" class="form-control inputs" name="confirmaContraseña" id="confirmaContraseña">
+                    <br>
                     <!--Alerta Usuario-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUs">
                         <i class="bi bi-info-circle-fill"></i>

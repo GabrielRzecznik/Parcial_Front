@@ -192,3 +192,7 @@ body{
 .derecha{
   text-align: right;
 }
+
+.suavizar{
+  border-radius: 5px;
+}
