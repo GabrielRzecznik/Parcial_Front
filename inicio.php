@@ -31,6 +31,6 @@
             <div class="col-md-1"></div>
         </div>
     </div>
-    <script src="js/js.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
