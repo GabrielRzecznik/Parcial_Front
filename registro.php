@@ -93,6 +93,6 @@
             <div class="espaciado"></div>
         </div>
     </div>
-    <script src="js/js.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>

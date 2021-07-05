@@ -51,6 +51,6 @@
             </div>
         </div>
     </div>
-    <script src="js/js.js"></script>
+    <script src="js/perfil.js"></script>
 </body>
 </html>
