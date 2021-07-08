@@ -1,5 +1,5 @@
 //Metodo Loud
-function formularioRegistroRz(){
+function formularioRzR(){
     var nombre = document.getElementById("nombre");
     var apellido = document.getElementById("apellido");
     var correo = document.getElementById("correo");
