@@ -20,14 +20,19 @@
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
                     <!--Usuario-->
-                    <span class="texto">Usuario </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
-                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
+                    <input type="text" class="form-control inputs" name="nombre" id="nombre">
+                    <br>
+                    <!--Apellido-->
+                    <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <br>
+                    <input type="text" class="form-control inputs" name="apellido" id="apellido">
                     <br>
                     <!--Correo-->
                     <span class="texto">Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
-                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
+                    <input type="text" class="form-control inputs" name="correo" id="correo">
                     <br>
                     <!--Contraseña-->
                     <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
@@ -38,6 +43,11 @@
                     <span class="texto">Confirme Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
                     <input type="password" class="form-control inputs" name="confirmaContraseña" id="confirmaContraseña">
+                    <br>
+                    <!--Provincia-->
+                    <span class="texto">Provincia</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <br>
+                    <input type="text" class="form-control inputs" name="provincia" id="provincia">
                     <br>
                     <!--Foto-->
                     <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
