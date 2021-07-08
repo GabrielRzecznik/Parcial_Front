@@ -63,6 +63,7 @@
                         <input class="form-check-input" type="checkbox" value="" id="terminosYCondiciones">
                         Aceptar terminos y condiciones
                     </div>
+                    <br>
                     <!--Alerta Usuario-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUs">
                         <i class="bi bi-info-circle-fill"></i>
