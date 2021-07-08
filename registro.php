@@ -58,9 +58,9 @@
                     <br>
                     <select class="form-control" name="edad" id="edad">
                         <option selected>Seleccione su edad...</option>
-                        <option value="1">Menos de 16</option>
-                        <option value="2">De 16 a 18</option>
-                        <option value="3">18 o mayor</option>
+                        <option value="1">> 16 años</option>
+                        <option value="2">≥ 16 y ≥ 17</option>
+                        <option value="3">≤ 18 años</option>
                     </select>
                     <br>
                     <!--Foto-->
