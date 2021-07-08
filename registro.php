@@ -53,6 +53,16 @@
                         <option value="3">Three</option>
                     </select>
                     <br>
+                    <!--Edad-->
+                    <span class="texto">Edad</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <br>
+                    <select class="form-control" name="edad" id="edad">
+                        <option selected>Seleccione su edad...</option>
+                        <option value="1">Menos de 16</option>
+                        <option value="2">De 16 a 18</option>
+                        <option value="3">18 o mayor</option>
+                    </select>
+                    <br>
                     <!--Foto-->
                     <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
@@ -110,7 +120,7 @@
             <div class="col-md-4 colorear4">
             </div>
             <div class="col-md-2"></div>
-            <div class="espaciado"></div>
+            <div class="espaciado2"></div>
         </div>
     </div>
     <script src="js/registro.js"></script>
