@@ -46,13 +46,23 @@
                     <!--Provincia-->
                     <span class="texto">Provincia</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
-                    <input type="text" class="form-control inputs" name="provincia" id="provincia">
+                    <select class="custom-select my-1 mr-sm-2" name="provincia" id="provincia">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
                     <br>
                     <!--Foto-->
                     <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
                     <input type="file" class="form-control inputs" name="fotoPerfil" id="fotoPerfil" value="fotoPerfil">
                     <br>
+                    <!--Terminos y Condiciones-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="terminosYCondiciones">
+                        Aceptar terminos y condiciones
+                    </div>
                     <!--Alerta Usuario-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUs">
                         <i class="bi bi-info-circle-fill"></i>
