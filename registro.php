@@ -46,7 +46,7 @@
                     <!--Provincia-->
                     <span class="texto">Provincia</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
-                    <select class="custom-select my-1 mr-sm-2" name="provincia" id="provincia">
+                    <select class="form-control" name="provincia" id="provincia">
                         <option selected>Choose...</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
