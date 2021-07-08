@@ -52,7 +52,7 @@
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
-                    <br>
+                    <br><br>
                     <!--Foto-->
                     <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
