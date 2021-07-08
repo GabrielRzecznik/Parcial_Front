@@ -61,7 +61,7 @@
                     <!--Terminos y Condiciones-->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="terminosYCondiciones">
-                        Aceptar terminos y condiciones
+                        <span class="texto">Aceptar terminos y condiciones</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     </div>
                     <br>
                     <!--Alerta Usuario-->
