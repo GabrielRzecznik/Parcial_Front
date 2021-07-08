@@ -47,7 +47,7 @@
                     <span class="texto">Provincia</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
                     <br>
                     <select class="form-control" name="provincia" id="provincia">
-                        <option selected>Choose...</option>
+                        <option selected>Seleccione su provincia...</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -59,7 +59,7 @@
                     <select class="form-control" name="edad" id="edad">
                         <option selected>Seleccione su edad...</option>
                         <option value="1">> 16 años</option>
-                        <option value="2">≤ 16 años y ≥ 17 años</option>
+                        <option value="2">≤ 16 años o ≥ 17 años</option>
                         <option value="3">≤ 18 años</option>
                     </select>
                     <br>
