@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Registro - Rz Automóviles</title>
 </head>
-<body onload="formularioRegistroRz()">
+<body onload="formularioRzR()">
     <div class="container espaciado">
         <div class="row">
             <div class="col-md-2"></div>
