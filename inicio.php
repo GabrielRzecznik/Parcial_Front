@@ -19,39 +19,43 @@
                     Rz Automóviles
                 </a>
                 <!--Imagen de Perfil-->
-                <!--<img class="fotoPerfil" id="fotoPerfil">-->
                 <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil" alt="No se encontro foto de perfil">
             </nav>
-            <br>
         </div>
+        <br>
         <div class="row">
-            <div class="col-md-12 colorear1">
-                <table class="table">
+            <div class="col-md-12">
+                <table class="table table-dark table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                            <th scope="col">Patente</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Version</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Cambio</th>
+                            <th scope="col">Combustible</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Kilometros</th>
+                            <th scope="col">Año</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
+                        <th id=""></th>
                         </tr>
                     </tbody>
                 </table>
