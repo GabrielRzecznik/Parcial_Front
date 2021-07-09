@@ -63,9 +63,9 @@
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Correo:</strong>
-                        El correo debe tener ?.
-                        <br>Solamente admite ?.
-                        <br>No permite ?.
+                        El correo ingresado no corresponde
+                        <br>a una dirección valida.
+                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
                     </div>
                     <!--Alerta Contraseña-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertContraseña">
@@ -86,17 +86,37 @@
                 <h3 class="texto">Otro datos</h3>
                 <br>
                 <!--Provincia-->
-                <span class="texto">Provincia</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
                     <br>
                     <select class="form-control" name="provincia" id="provincia">
-                        <option selected>Seleccione su provincia...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="0" selected>Seleccione su provincia...</option>
+                        <option value="1">Buenos Aires</option>
+                        <option value="2">Catamarca</option>
+                        <option value="3">Chaco</option>
+                        <option value="4">Chubut</option>
+                        <option value="5">Córdoba</option>
+                        <option value="6">Corrientes</option>
+                        <option value="7">Entre Ríos</option>
+                        <option value="8">Formosa</option>
+                        <option value="9">Jujuy</option>
+                        <option value="10">La Pampa</option>
+                        <option value="11">La Rioja</option>
+                        <option value="12">Mendoza</option>
+                        <option value="13">Misiones</option>
+                        <option value="14">Neuquén</option>
+                        <option value="15">Río Negro</option>
+                        <option value="16">Salta</option>
+                        <option value="17">San Juan</option>
+                        <option value="18">San Luis</option>
+                        <option value="19">Santa Cruz</option>
+                        <option value="20">Santa Fe</option>
+                        <option value="21">Santiago del Estero</option>
+                        <option value="22">Tierra del Fuego</option>
+                        <option value="23">Tucumán</option>
                     </select>
                     <br>
                     <!--Edad-->
-                    <span class="texto">Edad</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Edad</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
                     <br>
                     <select class="form-control" name="edad" id="edad">
                         <option selected>Seleccione su edad...</option>
@@ -106,14 +126,22 @@
                     </select>
                     <br>
                     <!--Foto-->
-                    <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
                     <br>
                     <input type="file" class="form-control inputs" name="fotoPerfil" id="fotoPerfil" value="fotoPerfil">
                     <br>
                     <!--Terminos y Condiciones-->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="tyc">
-                        <span class="texto">Aceptar terminos y condiciones</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                        <span class="texto">Aceptar terminos y condiciones</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
+                    </div>
+                    <!--Alerta Provincia-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Provincia:</strong>
+                        El nombre debe tener de 4 a 24 caracteres.
+                        <br>Solamente admite letras en "mayuscula" y "minuscula".
+                        <br>No permite caracteres especiales ni digitos.
                     </div>
                     <br>
                     <div class="centrado"> 

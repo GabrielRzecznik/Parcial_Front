@@ -67,7 +67,7 @@ const expresiones = {
     apellido: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
     correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //TESTEAR
     contraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
-    confirmeContraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/ //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
+    confirmeContraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
 };
 
 const campos = {
@@ -76,10 +76,6 @@ const campos = {
     correo: false,
     contraseña: false,
     confirmeContraseña: false,
-    provincia: false,
-    edad: false,
-    foto: false,
-    tyc: false,
 };
 
 const validarFormulario = (e) => {
@@ -183,6 +179,26 @@ const validarFormulario = (e) => {
            break;
    } 
 };
+
+document.getElementById("provincia").addEventListener('change', (event) => {
+    if (event.target.value >= 1) {
+        document.getElementById('iconoProvincia').classList.add('validado');
+        document.querySelector('#iconoProvincia').classList.remove('bi-x-circle-fill');
+        document.querySelector('#iconoProvincia').classList.add('bi-check-circle-fill');
+        //Mensaje de error provincia
+        document.getElementById('alertProvincia').classList.remove('alertaError');
+        //Validar provincia
+        campos['provincia'] = true;
+    }else{
+        document.getElementById('iconoProvincia').classList.add('error');
+        document.getElementById('iconoProvincia').classList.remove('validado');
+        document.querySelector('#iconoProvincia').classList.add('bi-x-circle-fill');
+        document.querySelector('#iconoProvincia').classList.remove('bi-check-circle-fill');
+        //Mensaje de error provincia
+        document.getElementById('alertProvincia').classList.add('alertaError');
+        campos['provincia'] = false;
+    }
+});
 
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
