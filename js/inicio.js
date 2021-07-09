@@ -1,6 +1,6 @@
 //Metodo Loud
 function inicio(){
-    peticionRegistrarUsuario();
+    mostrarTablaAutomoviles();
 
     //Pegar tablita
     let con = document.getElementById('con');
