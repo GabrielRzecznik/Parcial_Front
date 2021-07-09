@@ -300,8 +300,7 @@ function enviarFormulario() {
            document.querySelector('#registrarse').classList.add('invisible');//Esconde el texto del boton
            
             //Enviar AJAX
-            
-            peticionRegistrarUsuario();
+            peticionRegistrarUsuario(formulario);
 
            //Desmarcar todos los inputs
            document.querySelectorAll('#iconoNombre').forEach((icono) => {
