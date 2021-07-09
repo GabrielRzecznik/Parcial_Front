@@ -26,7 +26,9 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <br>
+                <table class="table table-dark table-striped">
+                ...
+                </table>
             </div>
             <div class="col-md-1"></div>
         </div>
