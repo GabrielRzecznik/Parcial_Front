@@ -17,7 +17,7 @@
             <div class="col-md-4 colorear1">
                 <h3 class="titulo">Crear Cuenta</h3>
                 <br>
-                <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
+                <form onsubmit="event.preventDefault()" action="#" method="post" id="formularioRegistro">
                     <!--Nombre-->
                     <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i><span class="mensajeNombre"></span>
                     <br>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="centrado"> 
                     <button type="submit" class="boton btn btn-secondary" name="boton" id="boton">
-                        <span id="loguearse">Crear Usuario</span>
+                        <span id="registrarse">Crear Usuario</span>
                         <span class="invisible" id="cargando">
                             <div class="sk-cube-grid">
                                 <div class="sk-cube sk-cube1"></div>

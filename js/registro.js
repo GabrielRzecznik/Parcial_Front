@@ -6,9 +6,6 @@ function formularioRzR(){
     var contraseña = document.getElementById("contraseña");
     var confirmeContraseña = document.getElementById("confirmeContraseña");
     var provincia = document.getElementById("provincia");
-    var edad = document.getElementById("edad");
-    var foto = document.getElementById("foto");
-    var tyc = document.getElementById("tyc");
     var boton = document.getElementById("boton");
     
     nombre.focus();
@@ -33,13 +30,11 @@ function formularioRzR(){
                 break;    
             case 'contraseña':
                 if (e.keyCode === 13) {
-                    boton.focus();
                     confirmeContraseña.focus();
                 }
                 break;
             case 'confirmeContraseña':
                 if (e.keyCode === 13) {
-                    boton.focus();
                     provincia.focus();
                 }
                 break;
@@ -60,7 +55,7 @@ function formularioRzR(){
 }
 
 //Validación de Campos
-const inputs = document.querySelectorAll('#formulario input');
+const inputs = document.querySelectorAll('#formularioRegistro input');
 
 const expresiones = {
     nombre: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
@@ -274,34 +269,51 @@ document.getElementById("tyc").addEventListener('change', (event) => {
 
 //Envia el formulario - Siempre en cuando no esten vacios los campos
 function enviarFormulario() {
-    const formulario = document.getElementById('formulario');
+    const formulario = document.getElementById('formularioRegistro');
     
     formulario.addEventListener('submit', (e) => {
-        const usuarioValue = usuario.value.trim();
+        const nombreValue = nombre.value.trim();
+        const apellidoValue = apellido.value.trim();
+        const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
+        const confirmeContraseñaValue = confirmeContraseña.value.trim();
     
-        if (usuarioValue === "") {
-            alert("Usuario vacio");
+        if (nombreValue === "") {
+            alert("Nombre vacio");
+        }if (apellidoValue === "") {
+            alert("Apellido vacio");
+        }if (correoValue === "") {
+            alert("Correo vacio");
         }if (contraseñaValue === "") {
             alert("Contraseña vacia")
+        }if (confirmeContraseñaValue === "") {
+            alert("Confirme contraseña vacio");
+        }if(contraseñaValue === confirmeContraseñaValue){
+            alert("Las contraseñas no coinciden");
         }
-        
+
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-       if (campos.usuario && campos.contraseña) {
+       if (campos.nombre && campos.apellido && campos.correo && campos.contraseña && campos.confirmeContraseña) {
            //Iniciar sessión
 
            //Cargando
            document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-           document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
+           document.querySelector('#registrarse').classList.add('invisible');//Esconde el texto del boton
            
             //Enviar
             var Datos = new FormData();
             Datos.append("usu",("usuario").value);
             Datos.append("con",("contraseña").value);
+            Datos.append("usu",("usuario").value);
+            Datos.append("con",("contraseña").value);
+            Datos.append("usu",("usuario").value);
+            Datos.append("con",("contraseña").value);
+            Datos.append("usu",("usuario").value);
+            Datos.append("con",("contraseña").value);
 
            //Desmarcar todos los inputs
-           document.querySelectorAll('#iconoU').forEach((icono) => {
+           document.querySelectorAll('#iconoNombre').forEach((icono) => {
             icono.classList.remove('error');
            });
            document.querySelectorAll('#iconoC').forEach((icono) => {

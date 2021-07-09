@@ -107,7 +107,7 @@ function enviarFormulario() {
         const contraseñaValue = contraseña.value.trim();
     
         if (correoValue === "") {
-            alert("correo vacio");
+            alert("Correo vacio");
         }if (contraseñaValue === "") {
             alert("Contraseña vacia")
         }
