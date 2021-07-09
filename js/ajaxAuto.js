@@ -8,8 +8,8 @@ function peticionRegistrarUsuario(formulario){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                var automovilesEncontrados = JSON.parse(xmlhttp.responseText);
-                console.log(automovilesEncontrados);
+                var data = JSON.parse(xmlhttp.responseText);
+                console.log(data);
                 var nombre_columnas = Object.keys(data[0]);
 
                 for (var i = 0; i < nombre_columnas.length; i++) {
