@@ -1,3 +1,7 @@
+//Pegar tablita
+let con = document.getElementById('con');
+let colum = document.getElementById('nombre_columnas');
+
 function mostrarTablaAutomoviles(){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
