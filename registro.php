@@ -36,7 +36,7 @@
                     <!--Contraseña-->
                     <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoContraseña"></i><span class="mensajeContraseña"></span>
                     <br>
-                    <input type="password" class="form-control inputs" name="password" id="contraseña">
+                    <input type="password" class="form-control inputs" name="contraseña" id="contraseña">
                     <br>
                     <!--Confirme Contraseña-->
                     <span class="texto">Confirme Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoConfirmeContraseña"></i><span class="mensajeConfirmeContraseña"></span>
