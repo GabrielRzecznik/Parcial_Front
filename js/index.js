@@ -20,7 +20,6 @@ function formularioRz(){
                 }
                 break;
             case 'boton':
-                
                 break;
             default:
                 enviarFormulario();

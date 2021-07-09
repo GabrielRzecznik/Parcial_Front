@@ -79,8 +79,7 @@
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Confirmación de Contraseña:</strong>
                         Las contraseña no coinciden.
-                    </div>
-                </form> 
+                    </div> 
             </div>
             <div class="col-md-4 colorear1">
                 <h3 class="texto">Otro datos</h3>
@@ -174,6 +173,7 @@
                         </span>
                     </button>
                     <br><br>
+                    </form>
                     <a class="registro" href="index.php">Volver Atrás</a>    
                 </div>
             </div>
