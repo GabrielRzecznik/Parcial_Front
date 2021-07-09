@@ -22,9 +22,10 @@
                 <!--<img class="fotoPerfil" id="fotoPerfil">-->
                 <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil" alt="No se encontro foto de perfil">
             </nav>
+            <br>
         </div>
         <div class="row">
-            <div class="col-md-12 colorear2">
+            <div class="col-md-12 colorear1">
                 <table class="table">
                     <thead>
                         <tr>
