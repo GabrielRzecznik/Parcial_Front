@@ -25,40 +25,14 @@
         <br>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-dark table-striped">
+                <table class="table table-hover table-dark tableFixHead">
                     <thead>
-                        <tr>
-                            <th scope="col">Patente</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Version</th>
-                            <th scope="col">Color</th>
-                            <th scope="col">Estado</th>
-                            <th scope="col">Cambio</th>
-                            <th scope="col">Combustible</th>
-                            <th scope="col">Valor</th>
-                            <th scope="col">Kilometros</th>
-                            <th scope="col">Año</th>
-                            <th scope="col"></th>
-                        </tr>
+                        <tr class="table-blue" id="nombre_columnas"></tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        <th id=""></th>
-                        </tr>
+                    <tbody id="con">
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>
