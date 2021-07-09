@@ -83,6 +83,11 @@ body{
   visibility: visible;
 }
 
+.signo{
+  visibility: visible;
+  color: rgb(255, 185, 93);
+}
+
 .inputs{
     background-color: rgb(216, 216, 216);
     border-color: rgb(63, 63, 63);

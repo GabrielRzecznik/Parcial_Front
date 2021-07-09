@@ -116,10 +116,10 @@
                     </select>
                     <br>
                     <!--Edad-->
-                    <span class="texto">Edad</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
+                    <span class="texto">Edad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEdad"></i><span class="mensajeEdad"></span>
                     <br>
                     <select class="form-control" name="edad" id="edad">
-                        <option selected>Seleccione su edad...</option>
+                        <option value="0" selected>Seleccione su edad...</option>
                         <option value="1">> 16 años</option>
                         <option value="2">≤ 16 años o ≥ 17 años</option>
                         <option value="3">≤ 18 años</option>
@@ -139,9 +139,8 @@
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Provincia:</strong>
-                        El nombre debe tener de 4 a 24 caracteres.
-                        <br>Solamente admite letras en "mayuscula" y "minuscula".
-                        <br>No permite caracteres especiales ni digitos.
+                        La opción seleccionada no es
+                        <br>valida, seleccione una provincia!
                     </div>
                     <br>
                     <div class="centrado"> 

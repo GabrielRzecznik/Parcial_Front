@@ -76,6 +76,8 @@ const campos = {
     correo: false,
     contraseña: false,
     confirmeContraseña: false,
+    provincia: false,
+    edad: false
 };
 
 const validarFormulario = (e) => {
@@ -180,8 +182,17 @@ const validarFormulario = (e) => {
    } 
 };
 
+inputs.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+});
+
+//Validar Provincia
 document.getElementById("provincia").addEventListener('change', (event) => {
     if (event.target.value >= 1) {
+        document.querySelector('#iconoProvincia').classList.remove('signo');
+        document.querySelector('#iconoProvincia').classList.remove('bi-exclamation-circle-fill');
+        document.getElementById('iconoProvincia').classList.add('error');
         document.getElementById('iconoProvincia').classList.add('validado');
         document.querySelector('#iconoProvincia').classList.remove('bi-x-circle-fill');
         document.querySelector('#iconoProvincia').classList.add('bi-check-circle-fill');
@@ -190,6 +201,9 @@ document.getElementById("provincia").addEventListener('change', (event) => {
         //Validar provincia
         campos['provincia'] = true;
     }else{
+        document.querySelector('#iconoProvincia').classList.remove('signo');
+        document.getElementById('iconoProvincia').classList.add('iconos', 'validado');
+        document.querySelector('#iconoProvincia').classList.remove('bi-exclamation-circle-fill');
         document.getElementById('iconoProvincia').classList.add('error');
         document.getElementById('iconoProvincia').classList.remove('validado');
         document.querySelector('#iconoProvincia').classList.add('bi-x-circle-fill');
@@ -200,11 +214,46 @@ document.getElementById("provincia").addEventListener('change', (event) => {
     }
 });
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+if (provincia.value == 0) {
+    document.querySelector('#iconoProvincia').classList.remove('bi-x-circle-fill');
+    document.querySelector('#iconoProvincia').classList.add('signo');
+    document.querySelector('#iconoProvincia').classList.add('bi-exclamation-circle-fill');
+    document.getElementById('iconoProvincia').classList.remove('iconos', 'validado');
+}
+
+//Validar Edad
+document.getElementById("edad").addEventListener('change', (event) => {
+    if (event.target.value > 1) {
+        document.querySelector('#iconoEdad').classList.remove('signo');
+        document.querySelector('#iconoEdad').classList.remove('bi-exclamation-circle-fill');
+        document.getElementById('iconoEdad').classList.add('error');
+        document.getElementById('iconoEdad').classList.add('validado');
+        document.querySelector('#iconoEdad').classList.remove('bi-x-circle-fill');
+        document.querySelector('#iconoEdad').classList.add('bi-check-circle-fill');
+        //Mensaje de error provincia
+        document.getElementById('alertEdad').classList.remove('alertaError');
+        //Validar provincia
+        campos['edad'] = true;
+    }else{
+        document.querySelector('#iconoEdad').classList.remove('signo');
+        document.getElementById('iconoEdad').classList.add('iconos', 'validado');
+        document.querySelector('#iconoEdad').classList.remove('bi-exclamation-circle-fill');
+        document.getElementById('iconoEdad').classList.add('error');
+        document.getElementById('iconoEdad').classList.remove('validado');
+        document.querySelector('#iconoEdad').classList.add('bi-x-circle-fill');
+        document.querySelector('#iconoEdad').classList.remove('bi-check-circle-fill');
+        //Mensaje de error provincia
+        document.getElementById('alertEdad').classList.add('alertaError');
+        campos['edad'] = false;
+    }
 });
 
+if (provincia.value == 0) {
+    document.querySelector('#iconoEdad').classList.remove('bi-x-circle-fill');
+    document.querySelector('#iconoEdad').classList.add('signo');
+    document.querySelector('#iconoEdad').classList.add('bi-exclamation-circle-fill');
+    document.getElementById('iconoEdad').classList.remove('iconos', 'validado');
+}
 
 //Envia el formulario - Siempre en cuando no esten vacios los campos
 function enviarFormulario() {
