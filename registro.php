@@ -124,11 +124,11 @@
                         <option value="3">≤ 18 años</option>
                     </select>
                     <br>
-                    <!--Foto-->
+                    <!--Foto
                     <span class="texto">Foto de Perfil </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
                     <br>
                     <input type="file" class="form-control inputs" name="fotoPerfil" id="fotoPerfil" value="fotoPerfil">
-                    <br>
+                    <br>-->
                     <!--Terminos y Condiciones-->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="tyc">
