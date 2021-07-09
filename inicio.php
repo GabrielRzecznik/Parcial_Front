@@ -32,7 +32,6 @@
                     <tbody id="con">
                     </tbody>
                 </table>
-                </div>
             </div>
         </div>
     </div>
