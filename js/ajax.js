@@ -8,7 +8,8 @@ function peticionRegistrarUsuario(formulario){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                alert("Salio todo bien!!");
+                var respuestaResivida = xmlhttp.responseText;
+                alert(respuestaResivida);
             }
             else{
                 alert("Exploto todo!!");
