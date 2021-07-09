@@ -9,8 +9,7 @@ function peticionRegistrarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var automovilesEncontrados = JSON.parse(xmlhttp.responseText);
-                alert(automovilesEncontrados);
-                console.log(peticionRegistrarUsuario);
+                console.log(automovilesEncontrados);
             }
             else{
                 alert("Exploto todo!!");
