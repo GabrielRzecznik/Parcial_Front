@@ -77,7 +77,8 @@ const campos = {
     contraseña: false,
     confirmeContraseña: false,
     provincia: false,
-    edad: false
+    edad: false,
+    tyc: false
 };
 
 const validarFormulario = (e) => {
@@ -231,6 +232,7 @@ document.getElementById("edad").addEventListener('change', (event) => {
         document.querySelector('#iconoEdad').classList.remove('bi-x-circle-fill');
         document.querySelector('#iconoEdad').classList.add('bi-check-circle-fill');
         //Mensaje de error provincia
+        document.getElementById('alertEdad2').classList.remove('alertaError');
         document.getElementById('alertEdad').classList.remove('alertaError');
         //Validar provincia
         campos['edad'] = true;
@@ -243,17 +245,32 @@ document.getElementById("edad").addEventListener('change', (event) => {
         document.querySelector('#iconoEdad').classList.add('bi-x-circle-fill');
         document.querySelector('#iconoEdad').classList.remove('bi-check-circle-fill');
         //Mensaje de error provincia
-        document.getElementById('alertEdad').classList.add('alertaError');
+        if (event.target.value == 1) {
+            document.getElementById('alertEdad').classList.remove('alertaError');
+            document.getElementById('alertEdad2').classList.add('alertaError');
+        }else{
+            document.getElementById('alertEdad2').classList.remove('alertaError');
+            document.getElementById('alertEdad').classList.add('alertaError');
+        }
         campos['edad'] = false;
     }
 });
 
-if (provincia.value == 0) {
+if (edad.value == 0) {
     document.querySelector('#iconoEdad').classList.remove('bi-x-circle-fill');
     document.querySelector('#iconoEdad').classList.add('signo');
     document.querySelector('#iconoEdad').classList.add('bi-exclamation-circle-fill');
     document.getElementById('iconoEdad').classList.remove('iconos', 'validado');
 }
+
+//Validar Terminos y Condiciones
+document.getElementById("tyc").addEventListener('change', (event) => {
+    if (tyc.checked == true) {
+        campos['tyc'] = true;
+    }else{
+        campos['tyc'] = false;
+    }
+});
 
 //Envia el formulario - Siempre en cuando no esten vacios los campos
 function enviarFormulario() {

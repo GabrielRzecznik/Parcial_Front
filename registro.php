@@ -135,6 +135,7 @@
                         <input class="form-check-input" type="checkbox" value="" id="tyc">
                         <span class="texto">Aceptar terminos y condiciones</span><i class="bi bi-x-circle-fill iconos validado" id="iconoCC"></i><span class="mensajeC"></span>
                     </div>
+                    <br>
                     <!--Alerta Provincia-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
                         <i class="bi bi-info-circle-fill"></i>
@@ -142,7 +143,19 @@
                         La opción seleccionada no es
                         <br>valida, seleccione una provincia!
                     </div>
-                    <br>
+                    <!--Alerta Edad-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertEdad">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Edad:</strong>
+                        La opción seleccionada no es
+                        <br>valida, seleccione una edad!
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show alerta" role="alert" id="alertEdad2">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Edad:</strong>
+                        Debes ser mayor de 16 años para poder
+                        <br>registrarte y utilizar nuestros servicios.
+                    </div>
                     <div class="centrado"> 
                     <button type="submit" class="boton btn btn-secondary" name="boton" id="boton">
                         <span id="loguearse">Crear Usuario</span>

@@ -19,11 +19,11 @@
                 <h3 class="titulo">Inicio de Sesión</h3>
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
-                    <span class="texto">Usuario </span><i class="bi bi-x-circle-fill iconos validado" id="iconoU"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCorreo"></i>
                     <br>
-                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
+                    <input type="text" class="form-control inputs" name="correo" id="correo">
                     <br>
-                    <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i><span class="mensajeC"> [A-Z] y [0-9]</span>
+                    <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i>
                     <br>
                     <input type="password" class="form-control inputs" name="contraseña" id="contraseña">
                     <br>
@@ -48,12 +48,12 @@
                         <a class="registro" href="registro.php">Regístrate</a>    
                     </div>
                     <!--Alerta Usuario-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUs">
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
                         <i class="bi bi-info-circle-fill"></i>
-                        <strong>Usuario:</strong>
-                        El usuario debe tener de 4 a 24 caracteres.
-                        <br>Permite espacio, guion medio y bajo.
-                        <br>No permite caracteres especiales ni digitos.
+                        <strong>Correo:</strong>
+                        El correo ingresado no corresponde
+                        <br>a una dirección valida.
+                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
                     </div>
                     <!--Alerta Contraseña-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCont">

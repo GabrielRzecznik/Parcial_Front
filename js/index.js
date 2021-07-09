@@ -1,14 +1,14 @@
 //Metodo Loud
 function formularioRz(){
-    var usuario = document.getElementById("usuario");
+    var correo = document.getElementById("correo");
     var contraseña = document.getElementById("contraseña");
     var boton = document.getElementById("boton");
     
-    usuario.focus();
+    correo.focus();
 
     const enter = (e) => {
         switch (e.target.name) {
-            case 'usuario':
+            case 'correo':
                 if (e.keyCode === 13) {
                     contraseña.focus();
                 }
@@ -28,7 +28,7 @@ function formularioRz(){
         }
     };
 
-    usuario.addEventListener('keypress', enter);
+    correo.addEventListener('keypress', enter);
     contraseña.addEventListener('keypress', enter);
     boton.addEventListener('click', enter);
 }
@@ -38,34 +38,34 @@ function formularioRz(){
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    usuario: /^[a-zA-Z\_\-\ ]{4,24}$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
+    correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
     contraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/ //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
 };
 
 const campos = {
-    usuario: false,
+    correo: false,
     contraseña: false
 };
 
 const validarFormulario = (e) => {
    switch (e.target.name) {//identifica el nombre del input manipulado
-        case 'usuario':
-            if (expresiones.usuario.test(e.target.value)) {
-                document.getElementById('iconoU').classList.add('validado');
-                document.querySelector('#iconoU').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoU').classList.add('bi-check-circle-fill');
-                //Mensaje de error usuario
-                document.getElementById('alertUs').classList.remove('alertaError');
-                //Validar usuario
-                campos['usuario'] = true;
+        case 'correo':
+            if (expresiones.correo.test(e.target.value)) {
+                document.getElementById('iconoCorreo').classList.add('validado');
+                document.querySelector('#iconoCorreo').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoCorreo').classList.add('bi-check-circle-fill');
+                //Mensaje de error correo
+                document.getElementById('alertCorreo').classList.remove('alertaError');
+                //Validar correo
+                campos['correo'] = true;
             }else{
-                document.getElementById('iconoU').classList.add('error');
-                document.getElementById('iconoU').classList.remove('validado');
-                document.querySelector('#iconoU').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoU').classList.remove('bi-check-circle-fill');
-                //Mensaje de error usuario
-                document.getElementById('alertUs').classList.add('alertaError');
-                campos['usuario'] = false;
+                document.getElementById('iconoCorreo').classList.add('error');
+                document.getElementById('iconoCorreo').classList.remove('validado');
+                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
+                //Mensaje de error correo
+                document.getElementById('alertCorreo').classList.add('alertaError');
+                campos['correo'] = false;
             }
             break;
         case 'contraseña':
@@ -103,18 +103,18 @@ function enviarFormulario() {
     const formulario = document.getElementById('formulario');
     
     formulario.addEventListener('submit', (e) => {
-        const usuarioValue = usuario.value.trim();
+        const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
     
-        if (usuarioValue === "") {
-            alert("Usuario vacio");
+        if (correoValue === "") {
+            alert("correo vacio");
         }if (contraseñaValue === "") {
             alert("Contraseña vacia")
         }
         
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-       if (campos.usuario && campos.contraseña) {
+       if (campos.correo && campos.contraseña) {
            //Iniciar sessión
 
            //Cargando
@@ -123,11 +123,11 @@ function enviarFormulario() {
            
             //Enviar
             var Datos = new FormData();
-            Datos.append("usu",("usuario").value);
+            Datos.append("cor",("correo").value);
             Datos.append("con",("contraseña").value);
 
            //Desmarcar todos los inputs
-           document.querySelectorAll('#iconoU').forEach((icono) => {
+           document.querySelectorAll('#iconoCorreo').forEach((icono) => {
             icono.classList.remove('error');
            });
            document.querySelectorAll('#iconoC').forEach((icono) => {
