@@ -16,6 +16,6 @@ function peticionRegistrarUsuario(formulario){
             }   
         }
     }
-    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automovil/listaAutomovil',true);
+    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles/listaAutomovil',true);
     xmlhttp.send();//No le mando
 }
