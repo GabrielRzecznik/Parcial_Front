@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Inicio - Rz Automóviles</title>
 </head>
-<body onload="formularioRz()">
+<body onload="inicio()">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-dark bg-dark">
@@ -31,6 +31,7 @@
             <div class="col-md-1"></div>
         </div>
     </div>
+    <script src="js/ajaxAuto.js"></script>
     <script src="js/inicio.js"></script>
 </body>
 </html>
