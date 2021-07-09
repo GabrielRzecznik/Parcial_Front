@@ -181,6 +181,7 @@
             <div class="espaciado2"></div>
         </div>
     </div>
+    <script src="js/ajax.js"></script>
     <script src="js/registro.js"></script>
 </body>
 </html>

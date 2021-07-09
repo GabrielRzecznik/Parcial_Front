@@ -288,8 +288,6 @@ function enviarFormulario() {
             alert("Contraseña vacia")
         }if (confirmeContraseñaValue === "") {
             alert("Confirme contraseña vacio");
-        }if(contraseñaValue === confirmeContraseñaValue){
-            alert("Las contraseñas no coinciden");
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
@@ -301,16 +299,9 @@ function enviarFormulario() {
            document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            document.querySelector('#registrarse').classList.add('invisible');//Esconde el texto del boton
            
-            //Enviar
-            var Datos = new FormData();
-            Datos.append("usu",("usuario").value);
-            Datos.append("con",("contraseña").value);
-            Datos.append("usu",("usuario").value);
-            Datos.append("con",("contraseña").value);
-            Datos.append("usu",("usuario").value);
-            Datos.append("con",("contraseña").value);
-            Datos.append("usu",("usuario").value);
-            Datos.append("con",("contraseña").value);
+            //Enviar AJAX
+            
+            peticionRegistrarUsuario();
 
            //Desmarcar todos los inputs
            document.querySelectorAll('#iconoNombre').forEach((icono) => {
