@@ -10,6 +10,7 @@ function peticionRegistrarUsuario(formulario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var automovilesEncontrados = JSON.parse(xmlhttp.responseText);
                 alert(automovilesEncontrados);
+                console.log(peticionRegistrarUsuario);
             }
             else{
                 alert("Exploto todo!!");
