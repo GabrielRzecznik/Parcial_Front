@@ -10,7 +10,7 @@ function peticionRegistrarUsuario(formulario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
                 console.log(data);
-                var nombre_columnas = Object.keys(data[0]);
+                var data = Object.keys(data[0]);
 
                 for (var i = 0; i < nombre_columnas.length; i++) {
                     colum.innerHTML = colum.innerHTML + '<th scope="col">' + nombre_columnas[i] + '</th>';
