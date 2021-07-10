@@ -1,6 +1,6 @@
 //Metodo Loud
 function perfil(){
     //Usuario
-    var correo = "correo: gabriel@gmail.com";
+    var correo = "rzecznik@gmail.com";
     mostrarDatosUsuario(correo);
 }
