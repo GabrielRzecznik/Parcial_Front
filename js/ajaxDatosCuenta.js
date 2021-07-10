@@ -2,8 +2,8 @@
 //let con = document.getElementById('con');
 //let colum = document.getElementById('nombre_columnas');
 
-function mostrarDatosUsuario(usuario){
-    var formJSON=JSON.stringify(usuario);
+function mostrarDatosUsuario(){
+    var formJSON=JSON.stringify({"correo":usuario});
     console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
