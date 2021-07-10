@@ -201,3 +201,7 @@ body{
 .suavizar{
   border-radius: 5px;
 }
+
+.nombreYApellido{
+  font-size: medium;
+}
