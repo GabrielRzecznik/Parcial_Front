@@ -8,7 +8,7 @@ function mostrarDatosUsuario(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = xmlhttp.responseText;
-                var filas = Object.keys(data[0].correo);
+                var filas = Object.keys(data[1].correo);
 
                 for (var i = 0; i < filas.length; i++) {
                     alert (filas[i]);
