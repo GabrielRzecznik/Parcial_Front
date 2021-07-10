@@ -2,8 +2,8 @@
 //let con = document.getElementById('con');
 //let colum = document.getElementById('nombre_columnas');
 
-function mostrarDatosUsuario(){
-    xmlhttp = new XMLHttpRequest();
+function mostrarDatosUsuario(hola){
+    xmlhttp = new XMLHttpRequest(hola);
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
@@ -26,5 +26,5 @@ function mostrarDatosUsuario(){
         }
     }
     xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/buscarUsuario',true);
-    xmlhttp.send();//No le mando
+    xmlhttp.send(hola);//No le mando
 }
