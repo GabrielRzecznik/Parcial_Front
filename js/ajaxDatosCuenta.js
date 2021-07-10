@@ -13,6 +13,7 @@ function mostrarDatosUsuario(usuario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
                 mostrarNombre.innerHTML = data[0]["nombre"];
+                mostrarApellido.innerHTML = data[0]["apellido"];
                 mostrarCorreo.innerHTML = data[0]["correo"];
                 mostrarProvincia.innerHTML = data[0]["provincia"];
             }else{
