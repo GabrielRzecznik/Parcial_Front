@@ -7,8 +7,8 @@ function mostrarDatosUsuario(){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                var data = JSON.parse(xmlhttp.responseText);
-                var usuario = data[1];
+                var data = xmlhttp.responseText;
+                var usuario = data[1];//test
 
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].correo == usuario.correo) {
