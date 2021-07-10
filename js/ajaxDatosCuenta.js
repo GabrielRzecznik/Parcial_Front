@@ -11,7 +11,7 @@ function mostrarDatosUsuario(usuario){
                 var data=JSON.parse(xmlhttp.responseText);
                 console.log(data);
                 console.log(data["correo"]);
-                mostrarCorreo.innerHTML = data["correo"];
+                mostrarCorreo.innerHTML = data[0]["correo"];
             }else{
                 alert("No se pudieron traer los datos del usuario!");
             }   
