@@ -21,5 +21,5 @@ function mostrarDatosUsuario(correo){
         }
     }
     xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/buscarUsuario',true);
-    xmlhttp.send(correo);//No le mando
+    xmlhttp.send();//No le mando
 }
