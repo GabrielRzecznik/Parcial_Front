@@ -1,3 +1,4 @@
+let mostrarCorreo = document.getElementById('correo');
 //Pegar tablita
 function mostrarDatosUsuario(usuario){
     var formJSON=JSON.stringify({"correo":usuario});
@@ -8,8 +9,7 @@ function mostrarDatosUsuario(usuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
-                let mostrarCorreo = document.getElementById('correo');
-                mostrarCorreo.innerHTML = data["correo"];
+                mostrarCorreo = data["correo"];
             }else{
                 alert("No se pudieron traer los datos del usuario!");
             }   
