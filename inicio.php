@@ -19,7 +19,9 @@
                     Rz Automóviles
                 </a>
                 <!--Imagen de Perfil-->
-                <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil" alt="No se encontro foto de perfil">
+                <a href="https://parcial-edi-front.herokuapp.com/perfil.html">
+                    <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil" alt="No se encontro foto de perfil">
+                </a>
             </nav>
         </div>
         <br>
