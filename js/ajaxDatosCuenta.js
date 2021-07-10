@@ -1,7 +1,7 @@
-let mostrarNombre = document.getElementById('correo');
-let mostrarApellido = document.getElementById('correo');
+let mostrarNombre = document.getElementById('nombre');
+let mostrarApellido = document.getElementById('apellido');
 let mostrarCorreo = document.getElementById('correo');
-let mostrarProvincia = document.getElementById('correo');
+let mostrarProvincia = document.getElementById('provincia');
 //Pegar tablita
 function mostrarDatosUsuario(usuario){
     var formJSON=JSON.stringify({"correo":usuario});
