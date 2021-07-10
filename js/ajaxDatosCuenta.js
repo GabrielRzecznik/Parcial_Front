@@ -8,16 +8,12 @@ function mostrarDatosUsuario(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = xmlhttp.responseText;
-                var usuario = data[1];//test
+                var filas = Object.keys(data.correo[0]);
 
-                alert(data.correo.length);
-                
+                for (var i = 0; i < filas.length; i++) {
+                    alert (filas[i]);
+                }
 
-                for (var i = 0; i < data.correo.length; i++) {
-                    if (data[i].correo == usuario.correo) {
-                        alert(data[i].correo);
-                    }
-                }    
                 
             }else{
                 alert("No se pudieron traer los datos del usuario!");
