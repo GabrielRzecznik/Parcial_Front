@@ -8,8 +8,8 @@ function mostrarDatosUsuario(usuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
-                mostrarCorreo.innerHTML = data["correo"];
                 let mostrarCorreo = document.getElementById('correo');
+                mostrarCorreo.innerHTML = data["correo"];
             }else{
                 alert("No se pudieron traer los datos del usuario!");
             }   
