@@ -10,6 +10,9 @@ function mostrarDatosUsuario(){
                 var data = xmlhttp.responseText;
                 var usuario = data[1];//test
 
+                alert(data.length);
+                
+
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].correo == usuario.correo) {
                         alert(data[i].correo.value);
