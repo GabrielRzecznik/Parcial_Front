@@ -2,7 +2,7 @@
 //let con = document.getElementById('con');
 //let colum = document.getElementById('nombre_columnas');
 
-function mostrarDatosUsuario(){
+function mostrarDatosUsuario(usuario){
     var formJSON=JSON.stringify({"correo":usuario});
     console.log(formJSON);
 
