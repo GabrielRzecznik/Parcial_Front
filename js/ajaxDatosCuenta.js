@@ -4,6 +4,7 @@
 
 function mostrarDatosUsuario(usuario){
     var formJSON=JSON.stringify(usuario);
+    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
