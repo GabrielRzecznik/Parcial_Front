@@ -3,9 +3,7 @@
 //let colum = document.getElementById('nombre_columnas');
 
 function mostrarDatosUsuario(usuario){
-    var formData= new FormData(usuario); //Las keys corresponden al atributo name de cada elemento  
-    var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
+    var formJSON=JSON.stringify(usuario);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
