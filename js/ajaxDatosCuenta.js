@@ -1,33 +1,26 @@
 //Pegar tablita
-let con = document.getElementById('con');
-let colum = document.getElementById('nombre_columnas');
+//let con = document.getElementById('con');
+//let colum = document.getElementById('nombre_columnas');
 
-function mostrarTablaAutomoviles(){
+function mostrarDatosUsuario(){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
+                var usuario = data[1];
 
-                    con.innerHTML = con.innerHTML    
-                    + '<td class="table-white">' + data[i].patente + '</td>' 
-                    + '<td class="table-white">' + data[i].marca + '</td>'
-                    + '<td class="table-white">' + data[i].modelo + '</td>'
-                    + '<td class="table-white">' + data[i].version + '</td>'
-                    + '<td class="table-white">' + data[i].color + '</td>'
-                    + '<td class="table-white">' + data[i].estado + '</td>'
-                    + '<td class="table-white">' + data[i].cambio + '</td>'
-                    + '<td class="table-white">' + data[i].combustible + '</td>'
-                    + '<td class="table-white">' + data[i].valor + '</td>'
-                    + '<td class="table-white">' + data[i].kilometraje + '</td>'
-                    + '<td class="table-white">' + data[i].anio + '</td>'
-                    + '<td class="table-white">' + data[i].propietario + '</td>'                                    
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].correo == usuario.correo) {
+                        alert("Se encontro el usuario");
+                    }
+                }    
                 
             }else{
-                alert("Exploto todo!!");
+                alert("No se pudieron traer los datos del usuario!");
             }   
         }
     }
-    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles/listaAutomovil',true);
+    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/buscarUsuario',true);
     xmlhttp.send();//No le mando
 }
