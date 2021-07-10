@@ -10,7 +10,7 @@ function mostrarDatosUsuario(usuario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
                 console.log(data);
-                mostrarCorreo.innerHTML = data.correo;
+                mostrarCorreo.innerHTML = data["apellido"];
             }else{
                 alert("No se pudieron traer los datos del usuario!");
             }   
