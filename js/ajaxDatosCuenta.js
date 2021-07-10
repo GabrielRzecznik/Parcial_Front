@@ -11,13 +11,7 @@ function mostrarDatosUsuario(usuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = xmlhttp.responseText;
-                var usuario = correo;
-
-                for (var i = 0; i < data.length; i++) {
-                    if(usuario == data[i].correo){
-                        alert("Hola mundo");
-                    }
-                }
+                var usuario = correo;    
             }else{
                 alert("No se pudieron traer los datos del usuario!");
             }   
