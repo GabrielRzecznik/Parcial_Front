@@ -59,7 +59,7 @@ const inputs = document.querySelectorAll('#formularioRegistro input');
 
 const expresiones = {
     nombre: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
-    apellido: /^[a-zA-Z\ \¨]{4,24}$/, //entre 4 y 24 caracteres
+    apellido: /^[a-zA-Z\ \ü\ö]{4,24}$/, //entre 4 y 24 caracteres
     correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //TESTEAR
     contraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
     confirmeContraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
