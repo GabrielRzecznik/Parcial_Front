@@ -313,14 +313,6 @@ function enviarFormulario() {
             peticionRegistrarUsuario(formulario);
 
             //window.location.href = 'https://parcial-edi-front.herokuapp.com/index.html';
-
-           //Desmarcar todos los inputs
-           document.querySelectorAll('#iconoNombre').forEach((icono) => {
-            icono.classList.remove('error');
-           });
-           document.querySelectorAll('#iconoC').forEach((icono) => {
-            icono.classList.remove('error');
-           });
        }else{
            alert("No se pudo iniciar sesión");
        }

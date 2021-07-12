@@ -13,8 +13,13 @@ function peticionRegistrarUsuario(formulario){
                 window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
             }if (xmlhttp.status == 500) {
                 alert("El correo ingresado ya corresponde a una cuenta existente");
-                document.querySelector('#registrarse').classList.remove('invisible');//Esconde el texto del boton
-                document.querySelector('#cargando').classList.add('invisible');//Logo de carga
+                //Logo de carga
+                document.querySelector('#registrarse').classList.remove('invisible');
+                document.querySelector('#cargando').classList.add('invisible');
+                //Marcar Correo
+                document.getElementById('iconoCorreo').classList.remove('validado');
+                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
             }
             else{
                 alert("Fallo la conexión con el servidor!!");
