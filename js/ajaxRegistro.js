@@ -11,7 +11,7 @@ function peticionRegistrarUsuario(formulario){
                 var respuestaResivida = xmlhttp.responseText;
                 alert(respuestaResivida);
                 window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
-            }if (xmlhttp.status == 500) {
+            }else if (xmlhttp.status == 500) {
                 alert("El correo ingresado ya corresponde a una cuenta existente");
                 //Logo de carga
                 document.querySelector('#registrarse').classList.remove('invisible');
