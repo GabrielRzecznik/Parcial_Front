@@ -59,7 +59,7 @@ const inputs = document.querySelectorAll('#formularioRegistro input');
 
 const expresiones = {
     nombre: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
-    apellido: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
+    apellido: /^[a-zA-Z\ ]{4,24}$/, //entre 4 y 24 caracteres
     correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //TESTEAR
     contraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
     confirmeContraseña: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/, //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
@@ -185,7 +185,7 @@ inputs.forEach((input) => {
 
 //Validar Provincia
 document.getElementById("provincia").addEventListener('change', (event) => {
-    if (event.target.value >= 1) {
+    if (event.target.value != 0) {
         document.querySelector('#iconoProvincia').classList.remove('signo');
         document.querySelector('#iconoProvincia').classList.remove('bi-exclamation-circle-fill');
         document.getElementById('iconoProvincia').classList.add('error');
@@ -215,6 +215,7 @@ if (provincia.value == 0) {
     document.querySelector('#iconoProvincia').classList.add('signo');
     document.querySelector('#iconoProvincia').classList.add('bi-exclamation-circle-fill');
     document.getElementById('iconoProvincia').classList.remove('iconos', 'validado');
+    campos['provincia'] = false;
 }
 
 //Validar Edad
@@ -256,6 +257,7 @@ if (edad.value == 0) {
     document.querySelector('#iconoEdad').classList.add('signo');
     document.querySelector('#iconoEdad').classList.add('bi-exclamation-circle-fill');
     document.getElementById('iconoEdad').classList.remove('iconos', 'validado');
+    campos['edad'] = 2;
 }
 
 //Validar Terminos y Condiciones
@@ -277,7 +279,7 @@ function enviarFormulario() {
         const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
         const confirmeContraseñaValue = confirmeContraseña.value.trim();
-    
+
         if (nombreValue === "") {
             alert("Nombre vacio");
         }if (apellidoValue === "") {
@@ -288,11 +290,19 @@ function enviarFormulario() {
             alert("Contraseña vacia")
         }if (confirmeContraseñaValue === "") {
             alert("Confirme contraseña vacio");
+        }if (campos.tyc == false) {
+            alert("Acepte los terminos y condiciones");
+        }if (campos.provincia == false) {
+            alert("Seleccione una provincia");
+        }if (campos.edad === false) {
+            alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
+        }if (campos.edad === 2) {
+            alert("Seleccione una edad");
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-       if (campos.nombre && campos.apellido && campos.correo && campos.contraseña && campos.confirmeContraseña) {
+       if (campos.nombre && campos.apellido && campos.correo && campos.contraseña && campos.confirmeContraseña && campos.provincia && campos.edad && campos.tyc) {
            //Iniciar sessión
 
            //Cargando
@@ -301,6 +311,8 @@ function enviarFormulario() {
            
             //Enviar AJAX
             peticionRegistrarUsuario(formulario);
+
+            window.location.href = 'https://parcial-edi-front.herokuapp.com/index.html';
 
            //Desmarcar todos los inputs
            document.querySelectorAll('#iconoNombre').forEach((icono) => {
