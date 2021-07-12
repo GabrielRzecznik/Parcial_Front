@@ -13,6 +13,7 @@ function peticionRegistrarUsuario(formulario){
                 window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
             }if (xmlhttp.status == 500) {
                 alert("El correo ingresado ya corresponde a una cuenta existente, ingrese otro correo");
+                window.location.href = "https://parcial-edi-front.herokuapp.com/registro.html";
             }
             else{
                 alert("Fallo la conexión con el servidor!!");
