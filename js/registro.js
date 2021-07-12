@@ -312,7 +312,7 @@ function enviarFormulario() {
             //Enviar AJAX
             peticionRegistrarUsuario(formulario);
 
-            window.location.href = 'https://parcial-edi-front.herokuapp.com/index.html';
+            //window.location.href = 'https://parcial-edi-front.herokuapp.com/index.html';
 
            //Desmarcar todos los inputs
            document.querySelectorAll('#iconoNombre').forEach((icono) => {
