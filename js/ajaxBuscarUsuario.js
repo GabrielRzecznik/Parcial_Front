@@ -14,9 +14,13 @@ function buscarUsuario(formulario){
                 }else{
                     alert("No se encontro el usuario!");
                 }
-            }else{
-                alert("No se encontro el usuario!");
-            }   
+            }if (xmlhttp.status == 500) {
+                if (correo.value !== data[0]["correo"]) {//TESTEAR
+                    alert("No se encontro el usuario!");
+                }else{
+                    alert("Ocurrio un error inesperado");
+                }
+            }
         }
     }
     xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/buscarUsuario',true);
