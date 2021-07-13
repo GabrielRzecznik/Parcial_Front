@@ -26,9 +26,10 @@ function pasajeFoco(){
                     boton.focus();//Revisar
                 }
                 break;
-            default:
-                break;
-        }
+                default:
+                    enviar();
+                    break;
+            }
     };
 
     correo.addEventListener('keypress', enter);
