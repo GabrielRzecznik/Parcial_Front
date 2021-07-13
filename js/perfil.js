@@ -71,7 +71,6 @@ var apellido = document.getElementById("apellido");
 var contraseña = document.getElementById("contraseña");
 var confirmeContraseña = document.getElementById("confirmeContraseña");
 var provincia = document.getElementById("provincia");
-var boton = document.getElementById("boton");
 
 nombre.focus();
 
