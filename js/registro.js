@@ -279,6 +279,7 @@ function enviarFormulario() {
         const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
         const confirmeContraseñaValue = confirmeContraseña.value.trim();
+        const edadValue = edad.value.trim();
 
         if (nombreValue === "") {
             alert("Nombre vacio");
@@ -295,7 +296,11 @@ function enviarFormulario() {
         }if (campos.provincia == false) {
             alert("Seleccione una provincia");
         }if (campos.edad === false) {
-            alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
+            if (edadValue === "") {
+                alert("Debes seleccionar una edad");
+            }else{
+                alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
+            }
         }if (campos.edad === 2) {
             alert("Seleccione una edad");
         }

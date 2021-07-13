@@ -20,8 +20,7 @@ function peticionRegistrarUsuario(formulario){
                 document.getElementById('iconoCorreo').classList.remove('validado');
                 document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
                 document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
-            }
-            else{
+            }else{
                 alert("Fallo la conexión con el servidor!!");
             }
         }
