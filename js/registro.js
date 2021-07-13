@@ -316,7 +316,7 @@ function enviarFormulario() {
         }
         
         //Terminos y condiciones
-        if (campos.tyc == false) {
+        if (campos.tyc === false) {
             alert("Acepte los terminos y condiciones");
         }
         
