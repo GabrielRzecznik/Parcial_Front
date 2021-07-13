@@ -256,10 +256,10 @@ function validarFormularioEdicionUsuario() {
             document.getElementById('iconoEdad').classList.add('validado');
             document.querySelector('#iconoEdad').classList.remove('bi-x-circle-fill');
             document.querySelector('#iconoEdad').classList.add('bi-check-circle-fill');
-            //Mensaje de error provincia
+            //Mensaje de error edad
             document.getElementById('alertEdad2').classList.remove('alertaError');
             document.getElementById('alertEdad').classList.remove('alertaError');
-            //Validar provincia
+            //Validar edad
             campos['edad'] = true;
         }else{
             document.querySelector('#iconoEdad').classList.remove('signo');
@@ -269,7 +269,7 @@ function validarFormularioEdicionUsuario() {
             document.getElementById('iconoEdad').classList.remove('validado');
             document.querySelector('#iconoEdad').classList.add('bi-x-circle-fill');
             document.querySelector('#iconoEdad').classList.remove('bi-check-circle-fill');
-            //Mensaje de error provincia
+            //Mensaje de error edad
             if (event.target.value == 1) {
                 document.getElementById('alertEdad').classList.remove('alertaError');
                 document.getElementById('alertEdad2').classList.add('alertaError');
