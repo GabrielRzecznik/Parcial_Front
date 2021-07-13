@@ -303,7 +303,7 @@ function enviarFormulario() {
         
         //Contraseña
         if (contraseñaValue === "") {
-            alert("Contraseña vacia")
+            alert("Contraseña vacia");
         }else if(contraseña.value === false){
             alert("La contraseña ingresado no es valido");
         }
@@ -311,8 +311,8 @@ function enviarFormulario() {
         //Confirmar contraseña
         if (confirmeContraseñaValue === "") {
             alert("Confirme contraseña vacio");
-        }else if(confirmeContraseña.value === false){
-            alert("La confirmación de la contraseña no es valido");
+        }else if(confirmeContraseñaValue === contraseñaValue){
+            alert("La confirmación de la contraseña no coinciden");
         }
         
         //Provincia
