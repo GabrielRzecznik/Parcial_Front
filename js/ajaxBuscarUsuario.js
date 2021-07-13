@@ -18,9 +18,9 @@ function buscarUsuario(formulario){
                         document.querySelector('#loguearse').classList.remove('invisible');
                         document.querySelector('#cargando').classList.add('invisible');
                         //Marcar Contraseña
-                        document.getElementById('iconoContraseña').classList.remove('validado');
-                        document.querySelector('#iconoContraseña').classList.add('bi-x-circle-fill');
-                        document.querySelector('#iconoContraseña').classList.remove('bi-check-circle-fill');
+                        document.getElementById('iconoC').classList.remove('validado');
+                        document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
+                        document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
                     }
                 }else{
                     alert("No se encontro el usuario!");
