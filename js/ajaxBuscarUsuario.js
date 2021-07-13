@@ -10,6 +10,19 @@ function buscarUsuario(formulario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 //var data = JSON.parse(xmlhttp.responseText);
                 window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
+                if (contraseña.value === data[i]["contraseña"]) {
+                    window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
+                }else{
+                    alert("La contraseña es incorrecta");
+                    //Logo de carga
+                    document.querySelector('#loguearse').classList.remove('invisible');
+                    document.querySelector('#cargando').classList.add('invisible');
+                    //Marcar Contraseña
+                    document.getElementById('iconoC').classList.remove('validado');
+                    document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
+                    document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
+                    contraseña.focus();
+                }
                 /*for (let i = 0; i < data.length; i++) {
                     if (correo.value === data[i]["correo"]) {
                         if (contraseña.value === data[i]["contraseña"]) {
