@@ -2,5 +2,6 @@
 function perfil(){
     //Usuario
     var usuario = "rzecznik@gmail.com";
-    mostrarDatosUsuario(usuario);
+    var contraseña = "Parcial2021";
+    mostrarDatosUsuario(usuario, contraseña);
 }
