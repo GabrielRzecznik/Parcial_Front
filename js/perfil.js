@@ -3,6 +3,7 @@ window.addEventListener('load',load);
 
 function load(){
     datosPerfil();
+    validarFormularioEdicionUsuario();
 }
 //#endregion
 
@@ -63,8 +64,7 @@ function editarUsuario(){
 }
 
 //#region Validación de Campos - Editar Usuario
-
-function validarFormularioEdicionUsuario(params) {
+function validarFormularioEdicionUsuario() {
     var nombre = document.getElementById("nombre");
     var apellido = document.getElementById("apellido");
     var contraseña = document.getElementById("contraseña");
