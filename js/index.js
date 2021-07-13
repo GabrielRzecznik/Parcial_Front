@@ -23,6 +23,7 @@ function pasajeFoco(){
                 break;
             case 'contraseña':
                 if (e.keyCode === 13) {
+                    alert("Hola");
                     boton.focus();//Revisar
                 }
                 break;
