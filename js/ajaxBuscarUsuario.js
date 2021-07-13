@@ -37,7 +37,6 @@ function buscarUsuario(formulario){
                     document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                 }
             }
-        }
     }
     xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/buscarUsuario',true);
     xmlhttp.send(formJSON);
