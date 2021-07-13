@@ -311,7 +311,7 @@ function enviarFormulario() {
         //Confirmar contraseña
         if (confirmeContraseñaValue === "") {
             alert("Confirme contraseña vacio");
-        }else if(confirmeContraseñaValue === contraseñaValue){
+        }else if(campos.confirmeContraseña === false){
             alert("La confirmación de la contraseña no coinciden");
         }
         
