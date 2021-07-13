@@ -34,6 +34,14 @@ function buscarUsuario(formulario){
                 }
             }else{
                 alert("No se encontro el usuario!");
+                //Marcar Contraseña
+                document.getElementById('iconoC').classList.remove('validado');
+                document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
+                //Marcar Correo
+                document.getElementById('iconoCorreo').classList.remove('validado');
+                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
             }   
         }
     }
