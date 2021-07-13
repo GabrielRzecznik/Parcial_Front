@@ -24,17 +24,17 @@ function buscarUsuario(formulario){
                                 document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
                                 contraseña.focus();
                             }
+                        }else{
+                            alert("No se encontro el usuario!");
+                            //Logo de carga
+                            document.querySelector('#cargando').classList.add('invisible');//Logo de carga
+                            document.querySelector('#loguearse').classList.remove('invisible');//Esconde el texto del boton
+                            //Marcar Correo
+                            document.getElementById('iconoCorreo').classList.remove('validado');
+                            document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
+                            document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                         }
                     }   
-                }else{
-                    alert("No se encontro el usuario!");
-                    //Logo de carga
-                    document.querySelector('#cargando').classList.add('invisible');//Logo de carga
-                    document.querySelector('#loguearse').classList.remove('invisible');//Esconde el texto del boton
-                    //Marcar Correo
-                    document.getElementById('iconoCorreo').classList.remove('validado');
-                    document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
-                    document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                 }
             }
     }
