@@ -279,30 +279,57 @@ function enviarFormulario() {
         const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
         const confirmeContraseñaValue = confirmeContraseña.value.trim();
-        const edadValue = edad.value.trim();
 
+        //Nombre
         if (nombreValue === "") {
             alert("Nombre vacio");
-        }if (apellidoValue === "") {
+        }else if(nombre.value === false){
+            alert("El nombre ingresado no es valido");
+        }
+        
+        //Apellido
+        if (apellidoValue === "") {
             alert("Apellido vacio");
-        }if (correoValue === "") {
+        }else if(apellido.value === false){
+            alert("El apellido ingresado no es valido");
+        }
+        
+        //Correo
+        if (correoValue === "") {
             alert("Correo vacio");
-        }if (contraseñaValue === "") {
+        }else if(correo.value === false){
+            alert("El correo ingresado no es valido");
+        }
+        
+        //Contraseña
+        if (contraseñaValue === "") {
             alert("Contraseña vacia")
-        }if (confirmeContraseñaValue === "") {
+        }else if(contraseña.value === false){
+            alert("La contraseña ingresado no es valido");
+        }
+        
+        //Confirmar contraseña
+        if (confirmeContraseñaValue === "") {
             alert("Confirme contraseña vacio");
-        }if (campos.tyc == false) {
+        }else if(confirmeContraseña.value === false){
+            alert("La confirmación de la contraseña no es valido");
+        }
+        
+        //Terminos y condiciones
+        if (campos.tyc == false) {
             alert("Acepte los terminos y condiciones");
-        }if (campos.provincia == false) {
+        }
+        
+        //Provincia
+        if (provincia.value === 0) {
             alert("Seleccione una provincia");
-        }if (campos.edad === false) {
-            if (edadValue === "") {
-                alert("Debes seleccionar una edad");
-            }else{
-                alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
-            }
-        }if (campos.edad === 2) {
-            alert("Seleccione una edad");
+        }
+        
+        //Edad
+        if (edad.value === 0) {
+            alert("Debes seleccionar una edad");
+        }else if(edad.value === 1){
+            alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
