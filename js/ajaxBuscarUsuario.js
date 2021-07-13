@@ -21,7 +21,7 @@ function buscarUsuario(formulario){
                         document.getElementById('iconoC').classList.remove('validado');
                         document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
                         document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
-                        contraseña.focus;
+                        contraseña.focus();
                     }
                 }else{
                     alert("No se encontro el usuario!");
