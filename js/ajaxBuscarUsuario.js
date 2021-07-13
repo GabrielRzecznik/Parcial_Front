@@ -8,7 +8,7 @@ function buscarUsuario(formulario){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                var data = JSON.parse(xmlhttp.responseText);
+                //var data = JSON.parse(xmlhttp.responseText);
                 window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
                 /*for (let i = 0; i < data.length; i++) {
                     if (correo.value === data[i]["correo"]) {
