@@ -25,8 +25,8 @@ function buscarUsuario(formulario){
                 }else{
                     alert("No se encontro el usuario!");
                     //Logo de carga
-                    document.querySelector('#registrarse').classList.remove('invisible');
-                    document.querySelector('#cargando').classList.add('invisible');
+                    document.querySelector('#cargando').classList.add('invisible');//Logo de carga
+                    document.querySelector('#loguearse').classList.remove('invisible');//Esconde el texto del boton
                     //Marcar Correo
                     document.getElementById('iconoCorreo').classList.remove('validado');
                     document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
