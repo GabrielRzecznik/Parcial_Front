@@ -96,22 +96,22 @@ inputs.forEach((input) => {
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
 //#endregion
-/*
-//#region Envia Formulario
 
+//#region Envia Formulario
+function enviar() {
     const formulario = document.getElementById('formulario');
     
     formulario.addEventListener('submit', (e) => {
         const correoValue = correo.value.trim();
         const contraseñaValue = contraseña.value.trim();
-    
+        
+        e.preventDefault();//evita que se envien los datos y se refresque la pagina
+        
         if (correoValue === "") {
             alert("Correo vacio");
         }if (contraseñaValue === "") {
             alert("Contraseña vacia")
         }
-        
-        e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
        if (campos.correo && campos.contraseña) {
            //Enviar AJAX
@@ -132,6 +132,5 @@ inputs.forEach((input) => {
        }
     
     }); 
-
+}
 //#endregion
-*/
