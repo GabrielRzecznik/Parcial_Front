@@ -14,6 +14,13 @@ function buscarUsuario(formulario){
                         window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
                     }else{
                         alert("La contraseña es incorrecta");
+                        //Logo de carga
+                        document.querySelector('#registrarse').classList.remove('invisible');
+                        document.querySelector('#cargando').classList.add('invisible');
+                        //Marcar Contraseña
+                        document.getElementById('iconoContraseña').classList.remove('validado');
+                        document.querySelector('#iconoContraseña').classList.add('bi-x-circle-fill');
+                        document.querySelector('#iconoContraseña').classList.remove('bi-check-circle-fill');
                     }
                 }else{
                     alert("No se encontro el usuario!");
