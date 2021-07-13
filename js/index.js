@@ -119,8 +119,6 @@ function enviarFormulario() {
         
             //Iniciar sessión
 
-
-
            //Cargando
            document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
@@ -129,14 +127,6 @@ function enviarFormulario() {
             var Datos = new FormData();
             Datos.append("cor",("correo").value);
             Datos.append("con",("contraseña").value);
-
-           //Desmarcar todos los inputs
-           document.querySelectorAll('#iconoCorreo').forEach((icono) => {
-            icono.classList.remove('error');
-           });
-           document.querySelectorAll('#iconoC').forEach((icono) => {
-            icono.classList.remove('error');
-           });
        }else{
            alert("No se pudo iniciar sesión");
        }
