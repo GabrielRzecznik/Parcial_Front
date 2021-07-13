@@ -2,7 +2,7 @@
 window.addEventListener('load',load);
 
 function load(){
-    perfil();
+    datosPerfil();
 }
 //#endregion
 
@@ -10,7 +10,7 @@ function load(){
 var usuario = "rzecznik@gmail.com";
 var contraseña = "Parcial2021";
 
-function perfil(){
+function datosPerfil(){
     mostrarDatosUsuario(usuario, contraseña);
 }
 
