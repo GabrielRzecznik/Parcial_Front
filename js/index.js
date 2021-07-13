@@ -24,7 +24,6 @@ function pasajeFoco(){
             case 'contraseña':
                 if (e.keyCode === 13) {
                     boton.focus();//Revisar
-                    enviarFormulario();
                 }
                 break;
         }
@@ -98,7 +97,7 @@ inputs.forEach((input) => {
 //#endregion
 
 //#region Envia Formulario
-function enviarFormulario() {
+
     const formulario = document.getElementById('formulario');
     
     formulario.addEventListener('submit', (e) => {
@@ -132,5 +131,5 @@ function enviarFormulario() {
        }
     
     }); 
-}
+
 //#endregion
