@@ -1,11 +1,13 @@
-//Metodo Loud
+//#region Metodo Load
 window.addEventListener('load',load);
 
 function load(){
-    formularioRz();
+    pasajeFoco();
 }
+//#endregion
 
-function formularioRz(){
+//#region Pasar El Foco
+function pasajeFoco(){
     var correo = document.getElementById("correo");
     var contraseña = document.getElementById("contraseña");
     var boton = document.getElementById("boton");
@@ -21,7 +23,7 @@ function formularioRz(){
                 break;
             case 'contraseña':
                 if (e.keyCode === 13) {
-                    boton.focus();
+                    boton.focus();//Revisar
                     enviarFormulario();
                 }
                 break;
@@ -32,9 +34,9 @@ function formularioRz(){
     contraseña.addEventListener('keypress', enter);
     boton.addEventListener('click', enter);
 }
+//#endregion
 
-
-//Validación de Campos
+//#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
@@ -87,18 +89,15 @@ const validarFormulario = (e) => {
                 campos['contraseña'] = false;
             }
             break;
-        default:
-           break;
    } 
 };
-
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
+//#endregion
 
-
-//Envia el formulario - Siempre en cuando no esten vacios los campos
+//#region Envia Formulario
 function enviarFormulario() {
     const formulario = document.getElementById('formulario');
     
@@ -134,4 +133,4 @@ function enviarFormulario() {
     
     }); 
 }
-
+//#endregion
