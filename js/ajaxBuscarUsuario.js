@@ -9,7 +9,8 @@ function buscarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
-                for (let i = 0; i < data.length; i++) {
+                window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
+                /*for (let i = 0; i < data.length; i++) {
                     if (correo.value === data[i]["correo"]) {
                         if (contraseña.value === data[i]["contraseña"]) {
                             window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
@@ -34,7 +35,9 @@ function buscarUsuario(formulario){
                         document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
                         document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                     }
-                }   
+                }*/  
+            }if (xmlhttp.status == 401) {
+                alert("No se encontro el usuario!");
             }
         }
     }
