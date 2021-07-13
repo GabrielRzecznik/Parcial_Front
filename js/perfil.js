@@ -102,7 +102,6 @@ const enter = (e) => {
             }
             break;
         default:
-            enviarFormulario();
             break;
     }
 };
