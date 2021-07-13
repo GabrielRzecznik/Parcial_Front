@@ -13,7 +13,7 @@ function pasajeFoco(){
     var boton = document.getElementById("boton");
     
     correo.focus();
-
+/*
     const enter = (e) => {
         switch (e.target.name) {
             case 'correo':
@@ -32,6 +32,7 @@ function pasajeFoco(){
                     break;
             }
     };
+*/
 
     correo.addEventListener('keypress', enter);
     contraseña.addEventListener('keypress', enter);
