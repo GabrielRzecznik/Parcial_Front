@@ -3,7 +3,6 @@ window.addEventListener('load',load);
 
 function load(){
     pasajeFoco();
-    enviar();
 }
 //#endregion
 
