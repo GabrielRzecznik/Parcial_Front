@@ -8,4 +8,5 @@ function perfil(){
     mostrarDatosUsuario(usuario, contraseña);
 }
 
-boton.addEventListener('click', eliminarUsuario(usuario, contraseña));
+var botonEliminar = document.getElementById("eliminar");
+botonEliminar.addEventListener('click', eliminarUsuario(usuario, contraseña));
