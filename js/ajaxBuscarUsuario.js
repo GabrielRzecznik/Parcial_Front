@@ -24,6 +24,13 @@ function buscarUsuario(formulario){
                     }
                 }else{
                     alert("No se encontro el usuario!");
+                    //Logo de carga
+                    document.querySelector('#registrarse').classList.remove('invisible');
+                    document.querySelector('#cargando').classList.add('invisible');
+                    //Marcar Correo
+                    document.getElementById('iconoCorreo').classList.remove('validado');
+                    document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
+                    document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                 }
             }else{
                 alert("No se encontro el usuario!");
