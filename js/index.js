@@ -13,7 +13,7 @@ function pasajeFoco(){
     var boton = document.getElementById("boton");
     
     correo.focus();
-    
+
     const enter = (e) => {
         switch (e.target.name) {
             case 'correo':
@@ -23,7 +23,6 @@ function pasajeFoco(){
                 break;
             case 'contraseña':
                 if (e.keyCode === 13) {
-                    alert("Hola");
                     boton.focus();//Revisar
                 }
                 break;
