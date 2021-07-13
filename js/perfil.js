@@ -15,5 +15,5 @@ function datosPerfil(){
 }
 
 var botonEliminar = document.getElementById("eliminar");
-botonEliminar.addEventListener('click', eliminarUsuario(usuario, contraseña));
+botonEliminar.addEventListener('click', eliminarUsuario);
 
