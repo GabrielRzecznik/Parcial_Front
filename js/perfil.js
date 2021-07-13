@@ -211,10 +211,10 @@ function validarFormularioEdicionUsuario() {
             break;
         } 
     };
-    console.log(provincia.value);
+    
     //Validar Provincia
     document.getElementById("provincia").addEventListener('change', (event) => {
-        if (event.target.value != 0) {
+        if (event.target.value != 0) {console.log(provincia.value);
             document.querySelector('#iconoProvincia').classList.remove('signo');
             document.querySelector('#iconoProvincia').classList.remove('bi-exclamation-circle-fill');
             document.getElementById('iconoProvincia').classList.add('error');
