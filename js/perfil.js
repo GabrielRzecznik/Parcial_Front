@@ -65,7 +65,7 @@ function editarUsuario(){
 }
 
 //#region Validación de Campos - Editar Usuario
-const inputs = document.querySelectorAll('#formularioRegistro input');
+const inputs = document.querySelectorAll('#editarPerfil input');
 
 const expresiones = {
     nombre: /^[a-zA-Z]{4,24}$/, //entre 4 y 24 caracteres
@@ -86,7 +86,7 @@ const campos = {
     tyc: false
 };
 
-const validarFormulario = (e) => {
+const validarFormularioEdicionUsuario = (e) => {
    switch (e.target.name) {
         case 'nombre':
             if (expresiones.nombre.test(e.target.value)) {
