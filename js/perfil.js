@@ -101,8 +101,6 @@ const enter = (e) => {
                 provincia.focus();
             }
             break;
-        case 'boton':
-            break;
         default:
             enviarFormulario();
             break;
@@ -114,7 +112,6 @@ apellido.addEventListener('keypress', enter);
 correo.addEventListener('keypress', enter);
 contraseña.addEventListener('keypress', enter);
 confirmeContraseña.addEventListener('keypress', enter);
-boton.addEventListener('click', enter);
 
 const inputs = document.querySelectorAll('#editarPerfil input');
 
