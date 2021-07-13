@@ -1,5 +1,5 @@
 //Pegar tablita
-function mostrarDatosUsuario(formulario){
+function buscarUsuario(formulario){
     var formData= new FormData(formulario);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);

@@ -114,7 +114,12 @@ function enviarFormulario() {
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
        if (campos.correo && campos.contraseña) {
-           //Iniciar sessión
+           //Enviar AJAX
+           buscarUsuario(formulario);
+        
+            //Iniciar sessión
+
+
 
            //Cargando
            document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
