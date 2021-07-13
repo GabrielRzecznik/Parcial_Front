@@ -38,6 +38,11 @@ function formularioRzR(){
                     provincia.focus();
                 }
                 break;
+            case 'boton':
+                break;
+            default:
+                enviarFormulario();
+                break;
         }
     };
 
