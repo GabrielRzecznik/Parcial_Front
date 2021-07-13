@@ -3,7 +3,7 @@ window.addEventListener('load',load);
 
 function load(){
     datosPerfil();
-    
+    validarFormularioEdicionUsuario();
 }
 //#endregion
 
@@ -13,14 +13,13 @@ var contraseña = "Parcial2021";
 
 function datosPerfil(){
     mostrarDatosUsuario(usuario, contraseña);
-    validarFormularioEdicionUsuario();
 }
 
 //Eliminar Usuario
 var botonEliminar = document.getElementById("eliminar");
 botonEliminar.addEventListener('click', eliminarUsuario);
 
-
+//Pegar tablita
 function eliminarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
@@ -44,6 +43,7 @@ function eliminarUsuario(){
 var botonEditar = document.getElementById("editar");
 botonEditar.addEventListener('click', editarUsuario);
 
+//Pegar tablita
 function editarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
@@ -214,7 +214,7 @@ function validarFormularioEdicionUsuario() {
     
     //Validar Provincia
     document.getElementById("provincia").addEventListener('change', (event) => {
-        if (event.target.value != 0) {console.log(provincia.value);
+        if (event.target.value != 0) {
             document.querySelector('#iconoProvincia').classList.remove('signo');
             document.querySelector('#iconoProvincia').classList.remove('bi-exclamation-circle-fill');
             document.getElementById('iconoProvincia').classList.add('error');
