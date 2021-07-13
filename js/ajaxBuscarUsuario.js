@@ -9,8 +9,12 @@ function buscarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
-                if (correo.value === data[0]["correo"]) {//TESTEAR
-                    window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
+                if (correo.value === data[0]["correo"]) {
+                    if (contraseña.value === data[0]["contraseña"]) {
+                        window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
+                    }else{
+                        alert("La contraseña es incorrecta");
+                    }
                 }else{
                     alert("No se encontro el usuario!");
                 }
