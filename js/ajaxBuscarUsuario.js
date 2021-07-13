@@ -9,7 +9,7 @@ function buscarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
-                for (let i = 0; i < 100; i++) {
+                for (let i = 0; i < data.length; i++) {
                     if (correo.value === data[i]["correo"]) {
                         if (contraseña.value === data[0]["contraseña"]) {
                             window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
