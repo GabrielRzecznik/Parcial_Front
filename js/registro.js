@@ -315,11 +315,6 @@ function enviarFormulario() {
             alert("La confirmación de la contraseña no es valido");
         }
         
-        //Terminos y condiciones
-        if (campos.tyc === false) {
-            alert("Acepte los terminos y condiciones");
-        }
-        
         //Provincia
         if (provincia.value == 0) {
             alert("Seleccione una provincia");
@@ -330,6 +325,11 @@ function enviarFormulario() {
             alert("Debes seleccionar una edad");
         }else if(edad.value == 1){
             alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
+        }
+
+        //Terminos y condiciones
+        if (campos.tyc === false) {
+            alert("Acepte los terminos y condiciones");
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
