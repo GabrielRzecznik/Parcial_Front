@@ -3,7 +3,7 @@ window.addEventListener('load',load);
 
 function load(){
     datosPerfil();
-    validarFormularioEdicionUsuario();
+    
 }
 //#endregion
 
@@ -62,7 +62,7 @@ function editarUsuario(){
     xmlhttp.open("DELETE",'https://parcial-edi-backend.herokuapp.com/Usuarios/eliminarUsuario',true);
     xmlhttp.send(formJSON);
 }
-
+validarFormularioEdicionUsuario();
 //#region Validación de Campos - Editar Usuario
 function validarFormularioEdicionUsuario() {
     var nombre = document.getElementById("nombre");
@@ -209,9 +209,9 @@ function validarFormularioEdicionUsuario() {
                 break;
             default:
             break;
-    } 
+        } 
     };
-
+    
     //Validar Provincia
     document.getElementById("provincia").addEventListener('change', (event) => {
         if (event.target.value != 0) {
