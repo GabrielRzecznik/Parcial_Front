@@ -1,4 +1,10 @@
 //Metodo Loud
+window.addEventListener('load',load);
+
+function load(){
+    formularioRz();
+}
+
 function formularioRz(){
     var correo = document.getElementById("correo");
     var contraseña = document.getElementById("contraseña");
