@@ -35,7 +35,7 @@ function pasajeFoco(){
     contraseña.addEventListener('keypress', enter);
 }
 //#endregion
-/*
+
 //#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -96,7 +96,7 @@ inputs.forEach((input) => {
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
 //#endregion
-
+/*
 //#region Envia Formulario
 
     const formulario = document.getElementById('formulario');
