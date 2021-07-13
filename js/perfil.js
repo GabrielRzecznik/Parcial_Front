@@ -188,11 +188,6 @@ const validarFormularioEdicionUsuario = (e) => {
    } 
 };
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
-});
-
 //Validar Provincia
 document.getElementById("provincia").addEventListener('change', (event) => {
     if (event.target.value != 0) {
@@ -269,4 +264,10 @@ if (edad.value == 0) {
     document.getElementById('iconoEdad').classList.remove('iconos', 'validado');
     campos['edad'] = 2;
 }
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup' , validarFormularioEdicionUsuario);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormularioEdicionUsuario);//cuando me salgo y preciono fuera del input
+});
+
 //#endregion
