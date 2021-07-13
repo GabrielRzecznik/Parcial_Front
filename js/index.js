@@ -124,11 +124,6 @@ function enviar() {
            //Cargando
            document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
-           
-            //Enviar
-            var Datos = new FormData();
-            Datos.append("cor",("correo").value);
-            Datos.append("con",("contraseña").value);
        }else{
            alert("No se pudo iniciar sesión");
        }
