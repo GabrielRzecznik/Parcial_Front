@@ -25,11 +25,6 @@ function formularioRz(){
                     enviarFormulario();
                 }
                 break;
-            case 'boton':
-                break;
-            default:
-                enviarFormulario();
-                break;
         }
     };
 
