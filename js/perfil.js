@@ -13,13 +13,14 @@ var contraseña = "Parcial2021";
 
 function datosPerfil(){
     mostrarDatosUsuario(usuario, contraseña);
+    validarFormularioEdicionUsuario();
 }
 
 //Eliminar Usuario
 var botonEliminar = document.getElementById("eliminar");
 botonEliminar.addEventListener('click', eliminarUsuario);
 
-//Pegar tablita
+
 function eliminarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
@@ -43,7 +44,6 @@ function eliminarUsuario(){
 var botonEditar = document.getElementById("editar");
 botonEditar.addEventListener('click', editarUsuario);
 
-//Pegar tablita
 function editarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
@@ -62,7 +62,7 @@ function editarUsuario(){
     xmlhttp.open("DELETE",'https://parcial-edi-backend.herokuapp.com/Usuarios/eliminarUsuario',true);
     xmlhttp.send(formJSON);
 }
-validarFormularioEdicionUsuario();
+
 //#region Validación de Campos - Editar Usuario
 function validarFormularioEdicionUsuario() {
     var nombre = document.getElementById("nombre");
@@ -211,7 +211,7 @@ function validarFormularioEdicionUsuario() {
             break;
         } 
     };
-    
+    console.log(provincia.value);
     //Validar Provincia
     document.getElementById("provincia").addEventListener('change', (event) => {
         if (event.target.value != 0) {
