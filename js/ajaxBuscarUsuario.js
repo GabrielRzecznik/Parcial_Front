@@ -9,9 +9,12 @@ function buscarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
+                if (data[correo] !== correo.value) {
+                    alert("Mendoza");
+                }
                 for (let i = 0; i < data.length; i++) {
                     if (correo.value === data[i]["correo"]) {
-                        if (contraseña.value === data[0]["contraseña"]) {
+                        if (contraseña.value === data[i]["contraseña"]) {
                             window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
                         }else{
                             alert("La contraseña es incorrecta");
