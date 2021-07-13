@@ -65,6 +65,57 @@ function editarUsuario(){
 }
 
 //#region Validación de Campos - Editar Usuario
+
+var nombre = document.getElementById("nombre");
+var apellido = document.getElementById("apellido");
+var contraseña = document.getElementById("contraseña");
+var confirmeContraseña = document.getElementById("confirmeContraseña");
+var provincia = document.getElementById("provincia");
+var boton = document.getElementById("boton");
+
+nombre.focus();
+
+//Focus por tecla enter
+const enter = (e) => {
+    switch (e.target.name) {
+        case 'nombre':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                apellido.focus();
+            }
+            break;
+        case 'apellido':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                contraseña.focus();
+            }
+            break;    
+        case 'contraseña':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                confirmeContraseña.focus();
+            }
+            break;
+        case 'confirmeContraseña':
+            if (e.keyCode === 13) {
+                provincia.focus();
+            }
+            break;
+        case 'boton':
+            break;
+        default:
+            enviarFormulario();
+            break;
+    }
+};
+
+nombre.addEventListener('keypress', enter);
+apellido.addEventListener('keypress', enter);
+correo.addEventListener('keypress', enter);
+contraseña.addEventListener('keypress', enter);
+confirmeContraseña.addEventListener('keypress', enter);
+boton.addEventListener('click', enter);
+
 const inputs = document.querySelectorAll('#editarPerfil input');
 
 const expresiones = {
