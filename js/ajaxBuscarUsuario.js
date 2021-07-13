@@ -15,7 +15,7 @@ function buscarUsuario(formulario){
                     }else{
                         alert("La contraseña es incorrecta");
                         //Logo de carga
-                        document.querySelector('#registrarse').classList.remove('invisible');
+                        document.querySelector('#loguearse').classList.remove('invisible');
                         document.querySelector('#cargando').classList.add('invisible');
                         //Marcar Contraseña
                         document.getElementById('iconoContraseña').classList.remove('validado');
