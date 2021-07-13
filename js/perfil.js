@@ -170,25 +170,6 @@ const validarFormularioEdicionUsuario = (e) => {
                 campos['apellido'] = false;
             }
             break;
-        case 'correo':
-            if (expresiones.correo.test(e.target.value)) {
-                document.getElementById('iconoCorreo').classList.add('validado');
-                document.querySelector('#iconoCorreo').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.add('bi-check-circle-fill');
-                //Mensaje de error correo
-                document.getElementById('alertCorreo').classList.remove('alertaError');
-                //Validar correo
-                campos['correo'] = true;
-            }else{
-                document.getElementById('iconoCorreo').classList.add('error');
-                document.getElementById('iconoCorreo').classList.remove('validado');
-                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
-                //Mensaje de error correo
-                document.getElementById('alertCorreo').classList.add('alertaError');
-                campos['correo'] = false;
-            }
-            break;
         case 'contraseña':
             if (expresiones.contraseña.test(e.target.value)) {
                 document.getElementById('iconoContraseña').classList.add('validado');
