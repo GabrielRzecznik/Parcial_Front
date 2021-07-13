@@ -18,11 +18,13 @@ function pasajeFoco(){
         switch (e.target.name) {
             case 'correo':
                 if (e.keyCode === 13) {
+                    e.preventDefault();
                     contraseña.focus();
                 }
                 break;
             case 'contraseña':
                 if (e.keyCode === 13) {
+                    e.preventDefault();
                     boton.focus();//Revisar
                 }
                 break;
