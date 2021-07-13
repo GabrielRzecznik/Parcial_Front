@@ -3,8 +3,8 @@ let mostrarApellido = document.getElementById('apellido');
 let mostrarCorreo = document.getElementById('correo');
 let mostrarProvincia = document.getElementById('provincia');
 //Pegar tablita
-function mostrarDatosUsuario(usuario){
-    var formJSON=JSON.stringify({"correo":usuario});
+function mostrarDatosUsuario(usuario, contraseña){
+    var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
