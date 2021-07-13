@@ -321,12 +321,12 @@ function enviarFormulario() {
         }
         
         //Provincia
-        if (provincia.value === 0) {
+        if (provincia.value == 0) {
             alert("Seleccione una provincia");
         }
         
         //Edad
-        if (edad.value === 0) {
+        if (edad.value == 0) {
             alert("Debes seleccionar una edad");
         }else if(edad.value === 1){
             alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
