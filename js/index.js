@@ -35,7 +35,7 @@ function pasajeFoco(){
     contraseña.addEventListener('keypress', enter);
 }
 //#endregion
-
+/*
 //#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -134,3 +134,4 @@ inputs.forEach((input) => {
     }); 
 
 //#endregion
+*/
