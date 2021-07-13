@@ -12,6 +12,8 @@ function buscarUsuario(formulario){
                 window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
+                document.querySelector('#loguearse').classList.remove('invisible');
+                document.querySelector('#cargando').classList.add('invisible');
             }
         }
     }
