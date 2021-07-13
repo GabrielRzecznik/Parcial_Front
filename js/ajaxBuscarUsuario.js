@@ -9,7 +9,7 @@ function buscarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
-                if (condition) {
+                if (correo.value === data[0]["correo"]) {//TESTEAR
                     window.location.href = "https://parcial-edi-front.herokuapp.com/inicio.html";
                 }else{
                     alert("No se encontro el usuario!");
