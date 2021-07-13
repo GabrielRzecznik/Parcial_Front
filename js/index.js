@@ -24,7 +24,6 @@ function pasajeFoco(){
                 break;
             case 'contraseña':
                 if (e.keyCode === 13) {
-                    e.preventDefault();
                     boton.focus();//Revisar
                 }
                 break;
