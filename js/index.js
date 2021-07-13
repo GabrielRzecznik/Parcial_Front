@@ -26,6 +26,8 @@ function pasajeFoco(){
                     boton.focus();//Revisar
                 }
                 break;
+            default:
+                break;
         }
     };
 
