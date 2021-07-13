@@ -328,7 +328,7 @@ function enviarFormulario() {
         //Edad
         if (edad.value == 0) {
             alert("Debes seleccionar una edad");
-        }else if(edad.value === 1){
+        }else if(edad.value == 1){
             alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
         }
 
