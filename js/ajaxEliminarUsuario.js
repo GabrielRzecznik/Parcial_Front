@@ -1,6 +1,5 @@
 function eliminarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function

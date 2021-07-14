@@ -1,7 +1,6 @@
 function peticionRegistrarUsuario(formulario){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
 
