@@ -1,4 +1,3 @@
-//Pegar tablita
 function buscarUsuario(formulario){
     var formData = new FormData(formulario);
     var formJSON = JSON.stringify(Object.fromEntries(formData));

@@ -259,7 +259,6 @@ function enviarActualizacionUsuario() {
         const apellidoValue = apellido.value.trim();
         const contraseñaValue = contraseña.value.trim();
         const confirmeContraseñaValue = confirmeContraseña.value.trim();
-        const correoValue = usu;
         
         //Nombre
         if (nombreValue === "") {
@@ -299,12 +298,6 @@ function enviarActualizacionUsuario() {
             alert("Debes seleccionar una edad");
         }else if(edad.value == 1){
             alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
-        }
-
-        //Usuario
-        if (correoValue == "") {
-            alert("Error grave");
-            window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
