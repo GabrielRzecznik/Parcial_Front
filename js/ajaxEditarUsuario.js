@@ -1,4 +1,4 @@
-function eliminarUsuario(){
+function editarUsuario(){
     var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
     console.log(formJSON);
 
@@ -6,13 +6,13 @@ function eliminarUsuario(){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                alert("Usuario eliminado!");
-                window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
+                alert("Usuario actualizado!");
+                window.location.href = "https://parcial-edi-front.herokuapp.com/perfil.html";
             }else{
-                alert("No se pudo eliminar el usuario!");
+                alert("No se pudo actualizar el usuario!");
             }   
         }
     }
-    xmlhttp.open("UPDATE",'https://parcial-edi-backend.herokuapp.com/Usuarios/editarUsuario',true);
+    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Usuarios/actualizarUsuario',true);
     xmlhttp.send(formJSON);
 }

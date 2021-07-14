@@ -35,13 +35,13 @@
                     </div>
                     <div class="col-md-9">
                         <!--Usuario-->
-                        <span class="texto nombreYApellido" id="nombre"></span>&nbsp;<span class="texto nombreYApellido" id="apellido"></span><button class="editarPerfil" id="editar"><i class="bi bi-pencil-square"></i></button>
+                        <span class="texto nombreYApellido" id="mostrarNombre"></span>&nbsp;<span class="texto nombreYApellido" id="mostrarApellido"></span><button class="editarPerfil" id="editar"><i class="bi bi-pencil-square"></i></button>
                         <br>
                         <i class="bi bi-envelope-fill"></i>
-                        <span class="texto" id="correo"></span>
+                        <span class="texto" id="mostrarCorreo"></span>
                         <br>
                         <i class="bi bi-geo-alt-fill"></i>
-                        <span class="texto" id="provincia"></span>
+                        <span class="texto" id="mostrarProvincia"></span>
                     </div>
                 </div>
                 <br>
@@ -49,12 +49,16 @@
                     <!--Nombre-->
                     <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
                     <input type="text" class="form-control inputs" name="nombre" id="nombre">
+                    <!--Apellido-->
                     <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
                     <input type="text" class="form-control inputs" name="apellido" id="apellido">
+                    <!--Contraseña-->
                     <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoContraseña"></i>
                     <input type="password" class="form-control inputs" name="contraseña" id="contraseña">
+                    <!--Confirma Contraseña-->
                     <span class="texto">Confirme Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoConfirmeContraseña"></i>
                     <input type="password" class="form-control inputs" name="confirmeContraseña" id="confirmeContraseña">
+                    <!--Provincia-->
                     <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
                     <select class="form-control" name="provincia" id="provincia">
                         <option value="0" selected>Seleccione su provincia...</option>
@@ -82,15 +86,16 @@
                         <option value="Tierra del Fuego">Tierra del Fuego</option>
                         <option value="Tucumán">Tucumán</option>    
                     </select>
+                    <!--Edad-->
                     <span class="texto">Edad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEdad"></i><span class="mensajeEdad"></span>
-                    <br>
                     <select class="form-control" name="edad" id="edad">
                         <option value="0" selected>Seleccione su edad...</option>
                         <option value="2">≤ 16 años o ≥ 17 años</option>
                         <option value="3">≤ 18 años</option>
                     </select>
                     <br>
-                    <input type="button" class="btn btn-warning" id="edit" value="Editar cuenta">
+                    <!--Boton Editar-->
+                    <input type="submit" class="btn btn-warning" id="edit" value="Editar cuenta">
                 </form>
                 <br>
                 <input type="button" class="btn btn-danger" id="eliminar" value="Eliminar cuenta">
@@ -150,6 +155,7 @@
     </div>
     <script src="js/ajaxDatosCuenta.js"></script>
     <script src="js/ajaxEliminarUsuario.js"></script>
+    <script src="js/ajaxEditarUsuario.js"></script>
     <script src="js/perfil.js"></script>
 </body>
 </html>

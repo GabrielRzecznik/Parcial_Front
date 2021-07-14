@@ -23,26 +23,6 @@ botonEliminar.addEventListener('click', eliminarUsuario);
 var botonEditar = document.getElementById("editar");
 botonEditar.addEventListener('click', editarUsuario);
 
-//Pegar tablita
-function editarUsuario(){
-    var formJSON=JSON.stringify({"correo":usuario, "contraseña":contraseña});
-    console.log(formJSON);
-
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
-        if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
-            if (xmlhttp.status == 200) {//Volvio Bien
-                alert("Usuario eliminado!");
-                window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
-            }else{
-                alert("No se pudo eliminar el usuario!");
-            }   
-        }
-    }
-    xmlhttp.open("DELETE",'https://parcial-edi-backend.herokuapp.com/Usuarios/eliminarUsuario',true);
-    xmlhttp.send(formJSON);
-}
-
 //#region Validación de Campos - Editar Usuario
 function validarFormularioEdicionUsuario() {
     var nombre = document.getElementById("nombre");
@@ -50,8 +30,7 @@ function validarFormularioEdicionUsuario() {
     var contraseña = document.getElementById("contraseña");
     var confirmeContraseña = document.getElementById("confirmeContraseña");
     var provincia = document.getElementById("provincia");
-
-    nombre.focus();
+    var edit = document.getElementById("edit");
 
     //Focus por tecla enter
     const enter = (e) => {
@@ -76,18 +55,23 @@ function validarFormularioEdicionUsuario() {
                 break;
             case 'confirmeContraseña':
                 if (e.keyCode === 13) {
+                    e.preventDefault();
                     provincia.focus();
                 }
                 break;
-            default:
+            case 'edit':
                 break;
-        }
+            default:
+                enviarActualizacionUsuario();
+                break;
+            }
     };
 
     nombre.addEventListener('keypress', enter);
     apellido.addEventListener('keypress', enter);
     contraseña.addEventListener('keypress', enter);
     confirmeContraseña.addEventListener('keypress', enter);
+    edit.addEventListener('click', enter);
 
     const inputs = document.querySelectorAll('#editarPerfil input');
 
@@ -191,7 +175,6 @@ function validarFormularioEdicionUsuario() {
             break;
         } 
     };
-    
     //Validar Provincia
     document.getElementById("provincia").addEventListener('change', (event) => {
         if (event.target.value != 0) {
@@ -275,4 +258,71 @@ function validarFormularioEdicionUsuario() {
     });
 }
 
+//Envia el formulario - Siempre en cuando no esten vacios los campos
+function enviarActualizacionUsuario() {
+    const formularioEditarUsuario = document.getElementById('editarPerfil');
+    
+    formularioEditarUsuario.addEventListener('submit', (e) => {
+        const nombreValue = nombre.value.trim();
+        const apellidoValue = apellido.value.trim();
+        const contraseñaValue = contraseña.value.trim();
+        const confirmeContraseñaValue = confirmeContraseña.value.trim();
+
+        //Nombre
+        if (nombreValue === "") {
+            alert("Nombre vacio");
+        }else if(nombre.value === false){
+            alert("El nombre ingresado no es valido");
+        }
+        
+        //Apellido
+        if (apellidoValue === "") {
+            alert("Apellido vacio");
+        }else if(apellido.value === false){
+            alert("El apellido ingresado no es valido");
+        }
+        
+        //Contraseña
+        if (contraseñaValue === "") {
+            alert("Contraseña vacia");
+        }else if(contraseña.value === false){
+            alert("La contraseña ingresado no es valido");
+        }
+        
+        //Confirmar contraseña
+        if (confirmeContraseñaValue === "") {
+            alert("Confirme contraseña vacio");
+        }else if(campos.confirmeContraseña === false){
+            alert("La confirmación de la contraseña no coinciden");
+        }
+        
+        //Provincia
+        if (provincia.value == 0) {
+            alert("Seleccione una provincia");
+        }
+        
+        //Edad
+        if (edad.value == 0) {
+            alert("Debes seleccionar una edad");
+        }else if(edad.value == 1){
+            alert("Debes tener por los menos 16 años para poder utilizar nuestros servicios");
+        }
+
+        e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+       if (campos.nombre && campos.apellido && campos.contraseña && campos.confirmeContraseña && campos.provincia && campos.edad) {
+           //Iniciar sessión
+
+           //Cargando
+           document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
+           document.querySelector('#registrarse').classList.add('invisible');//Esconde el texto del boton
+           
+            //Enviar AJAX
+            editarUsuario(editarPerfil);
+       }else{
+           alert("No se pudo iniciar sesión");
+       }
+    
+    }); 
+}
 //#endregion
