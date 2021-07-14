@@ -7,7 +7,7 @@ function load(){
 }
 //#endregion
 
-//Usuario
+//Simula ser el usuario
 var usuario = "rzecznik@gmail.com";
 var contraseña = "Parcial2021";
 
@@ -19,10 +19,6 @@ function datosPerfil(){
 var botonEliminar = document.getElementById("eliminar");
 botonEliminar.addEventListener('click', eliminarUsuario);
 
-//Editar Usuario
-var botonEditar = document.getElementById("editar");
-botonEditar.addEventListener('click', editarUsuario);
-
 //#region Validación de Campos - Editar Usuario
 function validarFormularioEdicionUsuario() {
     var nombre = document.getElementById("nombre");
@@ -30,7 +26,7 @@ function validarFormularioEdicionUsuario() {
     var contraseña = document.getElementById("contraseña");
     var confirmeContraseña = document.getElementById("confirmeContraseña");
     var provincia = document.getElementById("provincia");
-    var edit = document.getElementById("edit");
+    var botonEditar = document.getElementById("botonEditar");
 
     //Focus por tecla enter
     const enter = (e) => {
@@ -59,8 +55,7 @@ function validarFormularioEdicionUsuario() {
                     provincia.focus();
                 }
                 break;
-            case 'edit':
-                break;
+            case 'botonEditar':
             default:
                 enviarActualizacionUsuario();
                 break;
@@ -71,7 +66,7 @@ function validarFormularioEdicionUsuario() {
     apellido.addEventListener('keypress', enter);
     contraseña.addEventListener('keypress', enter);
     confirmeContraseña.addEventListener('keypress', enter);
-    edit.addEventListener('click', enter);
+    botonEditar.addEventListener('click', enter);
 
     const inputs = document.querySelectorAll('#editarPerfil input');
 
@@ -257,6 +252,7 @@ function validarFormularioEdicionUsuario() {
         input.addEventListener('blur' , validarFormularioEdicionUsuario);//cuando me salgo y preciono fuera del input
     });
 }
+//#endregion
 
 //Envia el formulario - Siempre en cuando no esten vacios los campos
 function enviarActualizacionUsuario() {
@@ -318,11 +314,10 @@ function enviarActualizacionUsuario() {
            document.querySelector('#registrarse').classList.add('invisible');//Esconde el texto del boton
            
             //Enviar AJAX
-            editarUsuario(editarPerfil);
+            editarUsuario(formularioEditarUsuario);
        }else{
            alert("No se pudo iniciar sesión");
        }
     
     }); 
 }
-//#endregion

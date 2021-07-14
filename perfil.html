@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <br>
-                <form method="post" id="editarPerfil">
+                <form method="event.preventDefault()" action="#" method="post" id="editarPerfil">
                     <!--Nombre-->
                     <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
                     <input type="text" class="form-control inputs" name="nombre" id="nombre">
@@ -95,7 +95,7 @@
                     </select>
                     <br>
                     <!--Boton Editar-->
-                    <input type="submit" class="btn btn-warning" id="edit" value="Editar cuenta">
+                    <input type="submit" class="btn btn-warning" name="botonEditar" id="botonEditar" value="Editar cuenta">
                 </form>
                 <br>
                 <input type="button" class="btn btn-danger" id="eliminar" value="Eliminar cuenta">
