@@ -314,6 +314,5 @@ function enviarActualizacionUsuario() {
        }else{
            alert("No se pudo iniciar sesión");
        }
-    
     }); 
 }
