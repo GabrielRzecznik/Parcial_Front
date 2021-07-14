@@ -1,4 +1,4 @@
-function peticionRegistrarUsuario(formularioEditarUsuario){
+function editarUsuario(formularioEditarUsuario){
     var formData= new FormData(formularioEditarUsuario); //Las keys corresponden al atributo name de cada elemento  
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
