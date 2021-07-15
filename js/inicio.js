@@ -442,7 +442,7 @@ function enviarPublicacion() {
            //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
        }else{
-           alert("No se pudo iniciar sesión");
+           alert("No se pudo subir la publicación");
        }
     
     }); 
