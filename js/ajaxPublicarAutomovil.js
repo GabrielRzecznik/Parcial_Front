@@ -20,7 +20,7 @@ function peticionPublicarAutovil(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Automovil/publicarAutomovil',true);
+    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Automoviles/publicarAutomovil',true);
     xmlhttp.send(formJSON);
 }
 
