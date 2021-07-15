@@ -15,12 +15,15 @@ function datosPerfil(){
 }
 
 function mostrarTablaAutomoviles(){
-    mostrarDatosUsuario(usu);
+    mostrarTablaMisAutomoviles(usu);
 }
 
 //Eliminar Usuario
 var botonEliminar = document.getElementById("eliminar");
 botonEliminar.addEventListener('click', eliminarUsuario);
+
+//Tabla Mis Publicaciones
+mostrarTablaAutomoviles();
 
 //#region Validación de Campos - Editar Usuario
 var nombre = document.getElementById("nombre");

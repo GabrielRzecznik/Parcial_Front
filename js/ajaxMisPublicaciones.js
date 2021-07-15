@@ -1,13 +1,14 @@
 let con = document.getElementById('con');
 let colum = document.getElementById('nombre_columnas');
 
-function mostrarTablaAutomoviles(usuario){
-    var propietario = usuario;
-
+function mostrarTablaMisAutomoviles(usuario){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
+                if ((document.getElementById('con')) == 1) {
+                    alert("Hola");
+                }
                 var data = JSON.parse(xmlhttp.responseText);
                 var nombre_columnas = Object.keys(data[0]);
 
@@ -37,9 +38,8 @@ function mostrarTablaAutomoviles(usuario){
             }   
         }
     }
-    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles//buscarMiListaAutomovil'+propietario,false);
+    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles/buscarMiListaAutomovil/'+usuario,false);
     xmlhttp.send();//No le mando
 }
 //Asincronico
-mostrarTablaAutomoviles();
 
