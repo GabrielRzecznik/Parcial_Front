@@ -1,7 +1,14 @@
 //Metodo Loud
 window.addEventListener('load',load);
 
+//Simula ser el usuario
+var usu = localStorage.getItem("usuario");
+var cont = localStorage.getItem("password");
+
+
 function load(){
+    usu = localStorage.getItem("usuario");
+    cont = localStorage.getItem("password");
     mostrarTablaAutomoviles();
 }
 
@@ -19,7 +26,7 @@ var estado = document.getElementById("estado");
 var cambio = document.getElementById("cambio");
 var valor = document.getElementById("valor");
 var kilometraje = document.getElementById("kilometraje");
-var año = document.getElementById("año");
+var anio = document.getElementById("anio");
 var publicar = document.getElementById("publicar");
 
 //Focus por tecla enter
@@ -72,7 +79,7 @@ const enter = (e) => {
                 año.focus();
             }
             break;
-        case 'año':
+        case 'anio':
             if (e.keyCode === 13) {
                 e.preventDefault();
                 botonEditar.focus();
@@ -94,7 +101,7 @@ estado.addEventListener('keypress', enter);
 cambio.addEventListener('keypress', enter);
 valor.addEventListener('keypress', enter);
 kilometraje.addEventListener('keypress', enter);
-año.addEventListener('keypress', enter);
+anio.addEventListener('keypress', enter);
 publicar.addEventListener('click', enter);
 
 const inputs = document.querySelectorAll('#formAutomovil input');
@@ -108,7 +115,7 @@ const expresiones = {
     estado: /^[a-zA-Z\ \ü\ö]{4,24}$/, //entre 4 y 24 caracteres
     valor: /^[0-9]{1,24}$/, //entre 4 y 24 caracteres
     kilometraje: /^[0-9\ \ü\ö]{1,24}$/, //entre 4 y 24 caracteres
-    año: /^[0-9\ \ü\ö]{4}$/ //entre 4 y 24 caracteres
+    anio: /^[0-9\ \ü\ö]{4}$/ //entre 4 y 24 caracteres
 };
 
 const campos = {
@@ -122,7 +129,7 @@ const campos = {
     combustible: false,
     valor: false,
     kilometraje: false,
-    año: false
+    anio: false
 };
 
 const validarFormulario = (e) => {
@@ -279,23 +286,22 @@ const validarFormulario = (e) => {
                 campos['kilometraje'] = false;
             }
             break;   
-        case 'año':
-            if (expresiones.año.test(e.target.value)) {
-                document.getElementById('iconoAño').classList.add('validado');
-                document.querySelector('#iconoAño').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoAño').classList.add('bi-check-circle-fill');
-                //Mensaje de error año
-                document.getElementById('alertAño').classList.remove('alertaError');
-                //Validar año
-                campos['año'] = true;
+        case 'anio':
+            if (expresiones.anio.test(e.target.value)) {
+                document.getElementById('iconoAnio').classList.add('validado');
+                document.querySelector('#iconoAnio').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoAnio').classList.add('bi-check-circle-fill');
+                //Mensaje de error añoAniodocument.getElementById('alertAño').classList.remove('alertaError');
+                //Validar anio
+                campos['anio'] = true;
             }else{
-                document.getElementById('iconoAño').classList.add('error');
-                document.getElementById('iconoAño').classList.remove('validado');
-                document.querySelector('#iconoAño').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoAño').classList.remove('bi-check-circle-fill');
-                //Mensaje de error año
-                document.getElementById('alertAño').classList.add('alertaError');
-                campos['año'] = false;
+                document.getElementById('iconoAnio').classList.add('error');
+                document.getElementById('iconoAnio').classList.remove('validado');
+                document.querySelector('#iconoAnio').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoAnio').classList.remove('bi-check-circle-fill');
+                //Mensaje de error anio
+                document.getElementById('alertAnio').classList.add('alertaError');
+                campos['anio'] = false;
             }
             break;
         default:
@@ -392,7 +398,7 @@ function enviarPublicacion() {
         const estadoValue = estado.value.trim();
         const valorValue = valor.value.trim();
         const kilometrajeValue = kilometraje.value.trim();
-        const añoValue = año.value.trim();
+        const anioValue = anio.value.trim();
         
         if (patenteValue === "") {
             alert("Patente vacia");
@@ -422,13 +428,13 @@ function enviarPublicacion() {
             alert("Valor vacio");
         }if (kilometrajeValue === "") {
             alert("Kilometraje vacio");
-        }if (añoValue === "") {
+        }if (anioValue === "") {
             alert("Año vacio");
         }
 
         e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-       if (campos.patente && campos.marca && campos.modelo && campos.version && campos.color && campos.estado && campos.cambio && campos.combustible && campos.valor && campos.kilometraje && campos.año) {
+       if (campos.patente && campos.marca && campos.modelo && campos.version && campos.color && campos.estado && campos.cambio && campos.combustible && campos.valor && campos.kilometraje && campos.anio) {
            //Enviar AJAX
            peticionPublicarAutovil(formulario);
 
