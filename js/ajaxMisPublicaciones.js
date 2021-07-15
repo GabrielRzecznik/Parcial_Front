@@ -37,7 +37,7 @@ function mostrarTablaAutomoviles(usuario){
             }   
         }
     }
-    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles//buscarMiListaAutomovil'+$propietario,false);
+    xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles//buscarMiListaAutomovil'+propietario,false);
     xmlhttp.send(formJSON);//No le mando
 }
 //Asincronico
