@@ -430,8 +430,8 @@ function enviarPublicacion() {
     
        if (campos.patente && campos.marca && campos.modelo && campos.version && campos.color && campos.estado && campos.cambio && campos.combustible && campos.valor && campos.kilometraje && campos.año) {
            //Enviar AJAX
-           //buscarUsuario(formulario);
-            
+           peticionPublicarAutovil(formulario);
+
            //Cargando
            //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
