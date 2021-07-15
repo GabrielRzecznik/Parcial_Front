@@ -3,7 +3,7 @@ function peticionPublicarAutovil(formulario){
     formData.append("correo", usu);
     var formJSON = JSON.stringify(formulario, {"propietario":usu});
     
-    //var formJSON=JSON.stringify(Object.fromEntries(formData));
+    var formJSON=JSON.stringify(Object.fromEntries(formData));
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
