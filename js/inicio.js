@@ -26,7 +26,6 @@ var publicar = document.getElementById("publicar");
 const enter = (e) => {
     switch (e.target.name) {
         case 'patente':
-            alert(patente.value);
             if (e.keyCode === 13) {
                 e.preventDefault();
                 marca.focus();
@@ -37,13 +36,13 @@ const enter = (e) => {
                 e.preventDefault();
                 modelo.focus();
             }
-            break;  
+            break;    
         case 'modelo':
             if (e.keyCode === 13) {
                 e.preventDefault();
                 version.focus();
             }
-            break;    
+            break;
         case 'version':
             if (e.keyCode === 13) {
                 e.preventDefault();
@@ -61,7 +60,6 @@ const enter = (e) => {
                 e.preventDefault();
                 cambio.focus();
             }
-            break;
         case 'valor':
             if (e.keyCode === 13) {
                 e.preventDefault();
@@ -77,13 +75,14 @@ const enter = (e) => {
         case 'año':
             if (e.keyCode === 13) {
                 e.preventDefault();
-                publicar.focus();
+                botonEditar.focus();
             }
             break;
+        case 'botonEditar':
         default:
             enviarPublicacion();
             break;
-    }
+        }
 };
 
 patente.addEventListener('keypress', enter);
@@ -101,15 +100,15 @@ publicar.addEventListener('click', enter);
 const inputs = document.querySelectorAll('#formAutomovil input');
 
 const expresiones = {
-    patente: /^(?=\w*\d+)[a-zA-Z0-9\ ]{7,9}$/,
-    marca: /^[a-zA-Z]{4,24}$/,
-    modelo: /^[a-zA-Z]{4,24}$/,
-    version: /^[a-zA-Z]{4,24}$/,
-    color: /^[a-zA-Z]{4,24}$/,
-    estado: /^[a-zA-Z]{4,24}$/,
-    valor: /^[a-zA-Z]{4,24}$/,
-    kilometraje: /^[a-zA-Z]{4,24}$/,
-    año: /^[a-zA-Z]{4,24}$/,
+    patente: /^[a-zA-Z0-9\ ]{7,9}$/,
+    marca: /^[a-zA-Z\ \ü\ö]{4,24}$/,
+    modelo: /^[a-zA-Z0-9\ \ü\ö]{1,24}$/,
+    version: /^[a-zA-Z0-9\ \ü\ö]{4,24}$/, 
+    color: /^[a-zA-Z\ \ü\ö]{4,24}$/, //entre 4 y 24 caracteres
+    estado: /^[a-zA-Z\ \ü\ö]{4,24}$/, //entre 4 y 24 caracteres
+    valor: /^[0-9]{1,24}$/, //entre 4 y 24 caracteres
+    kilometraje: /^[0-9\ \ü\ö]{1,24}$/, //entre 4 y 24 caracteres
+    año: /^[0-9\ \ü\ö]{4}$/ //entre 4 y 24 caracteres
 };
 
 const campos = {
@@ -129,7 +128,6 @@ const campos = {
 const validarFormulario = (e) => {
     switch (e.target.name) {//identifica el nombre del input manipulado
         case 'patente':
-            alert(e.target.name.value);
             if (expresiones.patente.test(e.target.value)) {
                 document.getElementById('iconoPatente').classList.add('validado');
                 document.querySelector('#iconoPatente').classList.remove('bi-x-circle-fill');
@@ -305,6 +303,11 @@ const validarFormulario = (e) => {
     } 
 }
 
+inputs.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+});
+
 //Validar Cambio
 document.getElementById("cambio").addEventListener('change', (event) => {
     if (event.target.value != 0) {
@@ -374,16 +377,11 @@ if (combustible.value == 0) {
     document.getElementById('iconoCombustible').classList.remove('iconos', 'validado');
     campos['combustible'] = false;
 }
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
-});
 //#endregion
 
 //#region Envia Formulario
 function enviarPublicacion() {
-    const formulario = document.getElementById('formularioRegistrarAutomovil');
+    const formulario = document.getElementById('formAutomovil');
     
     formulario.addEventListener('submit', (e) => {
         const patenteValue = patente.value.trim();
@@ -433,7 +431,7 @@ function enviarPublicacion() {
        if (campos.patente && campos.marca && campos.modelo && campos.version && campos.color && campos.estado && campos.cambio && campos.combustible && campos.valor && campos.kilometraje && campos.año) {
            //Enviar AJAX
            //buscarUsuario(formulario);
-
+            
            //Cargando
            //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
            //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
