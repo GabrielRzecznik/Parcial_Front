@@ -76,7 +76,7 @@ const enter = (e) => {
         case 'kilometraje':
             if (e.keyCode === 13) {
                 e.preventDefault();
-                año.focus();
+                anio.focus();
             }
             break;
         case 'anio':
