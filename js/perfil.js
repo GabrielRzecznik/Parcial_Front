@@ -1,15 +1,16 @@
 //#region Metodo Load
 window.addEventListener('load',load);
 
-function load(){
-    datosPerfil();
-}
-//#endregion
-
 //Simula ser el usuario
 var usu = localStorage.getItem("correo");
 var cont = localStorage.getItem("contraseña");
 
+function load(){
+    usu = localStorage.getItem("correo");
+    cont = localStorage.getItem("contraseña");
+    datosPerfil();
+}
+//#endregion
 
 function datosPerfil(){
     mostrarDatosUsuario(usu, cont);
