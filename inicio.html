@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Inicio - Rz Automóviles</title>
 </head>
-<body onload="inicio()">
+<body>
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-dark bg-dark">
@@ -29,7 +29,7 @@
                 <div class="container"></div>
                 <span class="texto nombreYApellido">Publicar Auto</span>
                 <br><br>
-                <form onsubmit="event.preventDefault()" action="#" method="post" id="formularioRegistrarAutomovil">  
+                <form onsubmit="event.preventDefault()" action="#" method="post" id="formAutomovil">  
                     <div class="row">
                         <div class="col-6">
                             <span class="texto">Patente </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPatente"></i><span class="mensajePatente"></span>
@@ -68,7 +68,7 @@
                             <span class="texto">Año </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAño"></i><span class="mensajeAño"></span>
                             <input type="text" id="año" class="form-control">
                             <br>
-                            <input type="submit" value="Publicar" class="btn btn-success" id="publicar">
+                            <button type="submit" class="btn btn-success" name="publicar" id="publicar">Publicar</button>
                         </div>
                     </div>
                 </form>

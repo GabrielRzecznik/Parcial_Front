@@ -1,7 +1,8 @@
 //Metodo Loud
-function inicio(){
+window.addEventListener('load',load);
+
+function load(){
     mostrarTablaAutomoviles();
-    pasajeFoco();
 }
 
 //Simula ser el usuario
@@ -9,85 +10,95 @@ var usu = "rzecznik@gmail.com";
 var cont = "Parcial2021";
 
 //#region Pasar El Foco
-function pasajeFoco(){
-    var patente = document.getElementById("patente");
-    var marca = document.getElementById("marca");
-    var modelo = document.getElementById("modelo");
-    var version = document.getElementById("version");
-    var color = document.getElementById("color");
-    var estado = document.getElementById("estado");
-    var cambio = document.getElementById("cambio");
-    var valor = document.getElementById("valor");
-    var kilometraje = document.getElementById("kilometraje");
-    var año = document.getElementById("año");
-    var publicar = document.getElementById("publicar");
+var patente = document.getElementById("patente");
+var marca = document.getElementById("marca");
+var modelo = document.getElementById("modelo");
+var version = document.getElementById("version");
+var color = document.getElementById("color");
+var estado = document.getElementById("estado");
+var cambio = document.getElementById("cambio");
+var valor = document.getElementById("valor");
+var kilometraje = document.getElementById("kilometraje");
+var año = document.getElementById("año");
+var publicar = document.getElementById("publicar");
 
-    //Focus por tecla enter
-    const enter = (e) => {
-        switch (e.target.name) {
-            case 'patente':
-                if (e.keyCode === 13) {
-                    marca.focus();
-                }
-                break;
-            case 'marca':
-                if (e.keyCode === 13) {
-                    modelo.focus();
-                }
-                break;  
-            case 'modelo':
-                if (e.keyCode === 13) {
-                    version.focus();
-                }
-                break;    
-            case 'version':
-                if (e.keyCode === 13) {
-                    color.focus();
-                }
-                break;
-            case 'color':
-                if (e.keyCode === 13) {
-                    estado.focus();
-                }
-                break;
-            case 'estado':
-                if (e.keyCode === 13) {
-                    cambio.focus();
-                }
-                break;
-            case 'valor':
-                if (e.keyCode === 13) {
-                    kilometraje.focus();
-                }
-                break;
-            case 'kilometraje':
-                if (e.keyCode === 13) {
-                    año.focus();
-                }
-                break;
-            case 'año':
+//Focus por tecla enter
+const enter = (e) => {
+    switch (e.target.name) {
+        case 'patente':
+            alert(patente.value);
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                marca.focus();
+            }
             break;
-            default:
-                enviarPublicacion();
-                break;
-        }
-    };
+        case 'marca':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                modelo.focus();
+            }
+            break;  
+        case 'modelo':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                version.focus();
+            }
+            break;    
+        case 'version':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                color.focus();
+            }
+            break;
+        case 'color':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                estado.focus();
+            }
+            break;
+        case 'estado':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                cambio.focus();
+            }
+            break;
+        case 'valor':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                kilometraje.focus();
+            }
+            break;
+        case 'kilometraje':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                año.focus();
+            }
+            break;
+        case 'año':
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                publicar.focus();
+            }
+            break;
+        default:
+            enviarPublicacion();
+            break;
+    }
+};
 
-    patente.addEventListener('keypress', enter);
-    marca.addEventListener('keypress', enter);
-    modelo.addEventListener('keypress', enter);
-    version.addEventListener('keypress', enter);
-    color.addEventListener('keypress', enter);
-    estado.addEventListener('keypress', enter);
-    valor.addEventListener('keypress', enter);
-    kilometraje.addEventListener('keypress', enter);
-    año.addEventListener('keypress', enter);
-    publicar.addEventListener('click', enter);
-}
-//#endregion
+patente.addEventListener('keypress', enter);
+marca.addEventListener('keypress', enter);
+modelo.addEventListener('keypress', enter);
+version.addEventListener('keypress', enter);
+color.addEventListener('keypress', enter);
+estado.addEventListener('keypress', enter);
+cambio.addEventListener('keypress', enter);
+valor.addEventListener('keypress', enter);
+kilometraje.addEventListener('keypress', enter);
+año.addEventListener('keypress', enter);
+publicar.addEventListener('click', enter);
 
-//#region Validación de Campos
-const inputs = document.querySelectorAll('#formularioRegistrarAutomovil input');
+const inputs = document.querySelectorAll('#formAutomovil input');
 
 const expresiones = {
     patente: /^(?=\w*\d+)[a-zA-Z0-9\ ]{7,9}$/,
@@ -114,12 +125,11 @@ const campos = {
     kilometraje: false,
     año: false
 };
-//#endregion
 
-//#region Validación de Input
 const validarFormulario = (e) => {
     switch (e.target.name) {//identifica el nombre del input manipulado
         case 'patente':
+            alert(e.target.name.value);
             if (expresiones.patente.test(e.target.value)) {
                 document.getElementById('iconoPatente').classList.add('validado');
                 document.querySelector('#iconoPatente').classList.remove('bi-x-circle-fill');
@@ -290,13 +300,10 @@ const validarFormulario = (e) => {
                 campos['año'] = false;
             }
             break;
-   } 
-};
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
-});
+        default:
+        break;
+    } 
+}
 
 //Validar Cambio
 document.getElementById("cambio").addEventListener('change', (event) => {
@@ -367,6 +374,11 @@ if (combustible.value == 0) {
     document.getElementById('iconoCombustible').classList.remove('iconos', 'validado');
     campos['combustible'] = false;
 }
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+});
 //#endregion
 
 //#region Envia Formulario
@@ -384,23 +396,47 @@ function enviarPublicacion() {
         const kilometrajeValue = kilometraje.value.trim();
         const añoValue = año.value.trim();
         
-        e.preventDefault();//evita que se envien los datos y se refresque la pagina
-        
-        if (correoValue === "") {
-            alert("Correo vacio");
-        }if (contraseñaValue === "") {
-            alert("Contraseña vacia")
+        if (patenteValue === "") {
+            alert("Patente vacia");
+        }if (marcaValue === "") {
+            alert("Marca vacia");
+        }if (modeloValue === "") {
+            alert("Modelo vacio");
+        }if (versionValue === "") {
+            alert("Versión vacio");
+        }if (colorValue === "") {
+            alert("Color vacio");
+        }if (estadoValue === "") {
+            alert("Estado vacio");
         }
-    
-       if (campos.correo && campos.contraseña) {
-           //Enviar AJAX
-           buscarUsuario(formulario);
         
-            //Iniciar sessión
+        //Cambio
+        if (cambio.value == 0) {
+            alert("Seleccione un tipo de cambio");
+        }
+
+        //Combustible
+        if (combustible.value == 0) {
+            alert("Seleccione un tipo de combustible");
+        }
+        
+        if (valorValue === "") {
+            alert("Valor vacio");
+        }if (kilometrajeValue === "") {
+            alert("Kilometraje vacio");
+        }if (añoValue === "") {
+            alert("Año vacio");
+        }
+
+        e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+       if (campos.patente && campos.marca && campos.modelo && campos.version && campos.color && campos.estado && campos.cambio && campos.combustible && campos.valor && campos.kilometraje && campos.año) {
+           //Enviar AJAX
+           //buscarUsuario(formulario);
 
            //Cargando
-           document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-           document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
+           //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
+           //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
        }else{
            alert("No se pudo iniciar sesión");
        }
