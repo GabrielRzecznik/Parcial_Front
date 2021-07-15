@@ -239,3 +239,11 @@ body{
 .active[data-content] {
 	display: block;
 }
+
+.decoracionBoton{
+  all: unset;
+}
+
+.centrarTexto{
+  text-align: center;
+}

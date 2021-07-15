@@ -35,7 +35,7 @@
                     </div>
                     <div class="col-md-9">
                         <!--Usuario-->
-                        <span class="texto nombreYApellido" id="mostrarNombre"></span>&nbsp;<span class="texto nombreYApellido" id="mostrarApellido"></span>&nbsp;<button class="editarPerfil" id="editar"><i class="bi bi-pencil-square iconoEditar"></i></button>
+                        <span class="texto nombreYApellido" id="mostrarNombre"></span>&nbsp;<span class="texto nombreYApellido" id="mostrarApellido"></span>
                         <br>
                         <i class="bi bi-envelope-fill"></i>
                         <span class="texto" id="mostrarCorreo"></span>
@@ -47,15 +47,25 @@
                 <br>
                 <!--Menu Pestañas-->
                 <div class="menu">
-                    <p data-target="#pestaña-publicaciones">Mis publicaciones</p>
-                    <p data-target="#pestaña-editar">Editar cuenta</p>
-                    <p data-target="#pestaña-eliminar">Editar cuenta</p>
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-publicaciones"><button class="decoracionBoton" id="misPublicaciones">Mis publicaciones <i class="bi bi-table iconoEditar"></i></button></p>
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-editar"><button class="decoracionBoton">Editar cuenta <i class="bi bi-pencil-square iconoEditar"></i></button></p>
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-eliminar"><button class="decoracionBoton">Eliminar cuenta <i class="bi bi-person-x iconoEditar"></i></button></p>
                 </div>
             
                 <div class="content">
                     <!--Publicaciones-->
-                    <div data-content id="pestaña-publicaciones" class="active">
+                    <div data-content id="pestaña-publicaciones">
                         <span class="texto nombreYApellido">Mis Publicaciones</span>
+                        <br><br>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-dark tableFixHead centrarTexto">
+                                <thead>
+                                    <tr class="table-blue" id="nombre_columnas"></tr>
+                                </thead>
+                                <tbody id="con">
+                                </tbody>
+                            </table>
+                        </div>
                         
                     </div>
                     <!--Editar Cuenta-->
@@ -181,11 +191,11 @@
             Debes tener por lo menos 16 años para
             <br>registrarte y utilizar nuestros servicios.
         </div>
-        <br>
     </div>
     <script src="js/ajaxDatosCuenta.js"></script>
     <script src="js/ajaxEliminarUsuario.js"></script>
     <script src="js/ajaxEditarUsuario.js"></script>
+    <script src="js/ajaxMisPublicaciones.js"></script>
     <script src="js/perfil.js"></script>
 </body>
 </html>
