@@ -214,3 +214,28 @@ body{
 .iconoEditar{
   color: rgb(255, 185, 93);
 }
+
+.decoracion{
+  text-decoration: none;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu p {
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.content {
+	margin-top: 2rem;
+}
+
+[data-content] {
+	display: none;
+}
+
+.active[data-content] {
+	display: block;
+}
