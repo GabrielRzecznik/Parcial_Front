@@ -1,7 +1,7 @@
 function peticionPublicarAutovil(formulario){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
     formData.append("correo", usu);
-    var formJSON = JSON.stringify({formulario, "propietario":usu});
+    var formJSON = JSON.stringify(formulario, {"propietario":usu});
     
     xmlhttp = new XMLHttpRequest();
 
