@@ -210,3 +210,7 @@ body{
 .editarPerfil{
   all: unset;
 }
+
+.iconoEditar{
+  color: rgb(255, 185, 93);
+}
