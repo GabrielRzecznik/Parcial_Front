@@ -33,17 +33,17 @@
                     <div class="row">
                         <div class="col-6">
                             <span class="texto">Patente </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPatente"></i><span class="mensajePatente"></span>
-                            <input type="text" id="patente" class="form-control">
+                            <input type="text" class="form-control inputs" name="patente" id="patente" class="form-control">
                             <span class="texto">Marca </span><i class="bi bi-x-circle-fill iconos validado" id="iconoMarca"></i><span class="mensajeMarca"></span>
-                            <input type="text" id="marca" class="form-control">
+                            <input type="text" class="form-control inputs" name="marca" id="marca" class="form-control">
                             <span class="texto">Modelo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoModelo"></i><span class="mensajeModelo"></span>
-                            <input type="text" id="modelo" class="form-control">
+                            <input type="text" class="form-control inputs" name="modelo" id="modelo" class="form-control">
                             <span class="texto">Version </span><i class="bi bi-x-circle-fill iconos validado" id="iconoVersion"></i><span class="mensajeVersion"></span>
-                            <input type="text" id="version" class="form-control">
+                            <input type="text" class="form-control inputs" name="version" id="version" class="form-control">
                             <span class="texto">Color </span><i class="bi bi-x-circle-fill iconos validado" id="iconoColor"></i><span class="mensajeColor"></span>
-                            <input type="text" id="color" class="form-control">
+                            <input type="text" class="form-control inputs" name="color" id="color" class="form-control">
                             <span class="texto">Estado </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEstado"></i><span class="mensajeEstado"></span>
-                            <input type="text" id="estado" class="form-control">
+                            <input type="text" class="form-control inputs" name="estado" id="estado" class="form-control">
                         </div>
                         <div class="col-6">
                             <span class="texto">Cambio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCambio"></i><span class="mensajeCambio"></span>
@@ -62,14 +62,69 @@
                                 <option value="Electrico">Electrico</option>
                             </select>
                             <span class="texto">Valor </span><i class="bi bi-x-circle-fill iconos validado" id="iconoValor"></i><span class="mensajeValor"></span>
-                            <input type="text" id="valor" class="form-control">
+                            <input type="text" class="form-control inputs" name="valor" id="valor" class="form-control">
                             <span class="texto">Kilometraje </span><i class="bi bi-x-circle-fill iconos validado" id="iconoKilometraje"></i><span class="mensajeKilometraje"></span>
-                            <input type="text" id="kilometraje" class="form-control">
+                            <input type="text" class="form-control inputs" name="kilometraje" id="kilometraje" class="form-control">
                             <span class="texto">Año </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAño"></i><span class="mensajeAño"></span>
-                            <input type="text" id="año" class="form-control">
+                            <input type="text" class="form-control inputs" name="año" id="año" class="form-control">
                             <br>
                             <button type="submit" class="btn btn-success" name="publicar" id="publicar">Publicar</button>
                         </div>
+                    </div>
+                    <!--Alerta Patente-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPatente">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Patente:</strong>
+                    </div>
+                    <!--Alerta Marca-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertMarca">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Marca:</strong>
+                    </div>
+                    <!--Alerta Modelo-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertModelo">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Modelo:</strong>
+                    </div>
+                    <!--Alerta Version-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertVersion">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Version:</strong>
+                    </div>
+                    <!--Alerta color-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertColor">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Color:</strong>
+                    </div>
+                    <!--Alerta Estado-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertEstado">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Estado:</strong>
+                    </div>
+                    <!--Alerta Cambio-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCambio">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Cambio:</strong>
+                    </div>
+                    <!--Alerta Combustible-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCombustible">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Combustible:</strong>
+                    </div>
+                    <!--Alerta Valor-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertValor">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Valor:</strong>
+                    </div>
+                    <!--Alerta Kilometraje-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertKilometraje">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Kilometraje:</strong>
+                    </div>
+                    <!--Alerta Año-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertAño">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Año:</strong>
                     </div>
                 </form>
                 <br><br>

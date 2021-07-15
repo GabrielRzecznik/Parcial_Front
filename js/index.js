@@ -11,7 +11,7 @@ function pasajeFoco(){
     var correo = document.getElementById("correo");
     var contraseña = document.getElementById("contraseña");
     var boton = document.getElementById("boton");
-
+    
     correo.focus();
 
     const enter = (e) => {
