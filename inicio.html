@@ -24,14 +24,64 @@
                 </a>
             </nav>
         </div>
-        <br>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 colorear1">
+                <div class="container"></div>
+                <span class="texto nombreYApellido">Publicar Auto</span>
+                <br><br>
+                <form onsubmit="event.preventDefault()" action="#" method="post" id="formularioRegistrarAutomovil">  
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="texto">Patente </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPatente"></i><span class="mensajePatente"></span>
+                            <input type="text" id="patente" class="form-control">
+                            <span class="texto">Marca </span><i class="bi bi-x-circle-fill iconos validado" id="iconoMarca"></i><span class="mensajeMarca"></span>
+                            <input type="text" id="marca" class="form-control">
+                            <span class="texto">Modelo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoModelo"></i><span class="mensajeModelo"></span>
+                            <input type="text" id="modelo" class="form-control">
+                            <span class="texto">Version </span><i class="bi bi-x-circle-fill iconos validado" id="iconoVersion"></i><span class="mensajeVersion"></span>
+                            <input type="text" id="version" class="form-control">
+                            <span class="texto">Color </span><i class="bi bi-x-circle-fill iconos validado" id="iconoColor"></i><span class="mensajeColor"></span>
+                            <input type="text" id="color" class="form-control">
+                            <span class="texto">Estado </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEstado"></i><span class="mensajeEstado"></span>
+                            <input type="text" id="estado" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <span class="texto">Cambio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCambio"></i><span class="mensajeCambio"></span>
+                            <select class="form-control" name="cambio" id="cambio">
+                                <option value="0" selected>Seleccione el cambio...</option>
+                                <option value="Manual">Manual</option>
+                                <option value="Automatico">Automatico</option>
+                            </select>
+                            <span class="texto">Combustible </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCombustible"></i><span class="mensajeCombustible"></span>
+                            <select class="form-control" name="combustible" id="combustible">
+                                <option value="0" selected>Seleccione el combustible...</option>
+                                <option value="Nafta">Gas</option>
+                                <option value="Disel">Disel</option>
+                                <option value="Nafta">Nafta</option>
+                                <option value="Hibrido">Hibrido</option>
+                                <option value="Electrico">Electrico</option>
+                            </select>
+                            <span class="texto">Valor </span><i class="bi bi-x-circle-fill iconos validado" id="iconoValor"></i><span class="mensajeValor"></span>
+                            <input type="text" id="valor" class="form-control">
+                            <span class="texto">Kilometraje </span><i class="bi bi-x-circle-fill iconos validado" id="iconoKilometraje"></i><span class="mensajeKilometraje"></span>
+                            <input type="text" id="kilometraje" class="form-control">
+                            <span class="texto">Año </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAño"></i><span class="mensajeAño"></span>
+                            <input type="text" id="año" class="form-control">
+                            <br>
+                            <input type="submit" value="Publicar" class="btn btn-success" id="publicar">
+                        </div>
+                    </div>
+                </form>
+                <br><br>
+                <!--
                 <div class="input-group col-auto">
+                    
                     <div class="input-group">
                     <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Filtrar por marca"><button type="submit" class="input-group-text"><i class="bi bi-search"></i></button>
                     </div>
-                </div>
+                </div>-->
+                <span class="texto nombreYApellido">Lista de Automoviles Publicados</span>
+                <br><br>
                 <div class="table-responsive">
                     <table class="table table-hover table-dark tableFixHead centrarTexto">
                         <thead>

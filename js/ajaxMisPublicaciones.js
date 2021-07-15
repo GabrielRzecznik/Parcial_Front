@@ -28,7 +28,7 @@ function mostrarTablaMisAutomoviles(usuario){
                     + '<td class="table-white">' + data[i].estado + '</td>'
                     + '<td class="table-white">' + data[i].cambio + '</td>'
                     + '<td class="table-white">' + data[i].combustible + '</td>'
-                    + '<td class="table-white">' + data[i].valor + '</td>'
+                    + '<td class="table-white">$' + data[i].valor + '</td>'
                     + '<td class="table-white">' + data[i].kilometraje + '</td>'
                     + '<td class="table-white">' + data[i].anio + '</td>'
                     + '<td class="table-white">' + data[i].propietario + '</td>'                                    
