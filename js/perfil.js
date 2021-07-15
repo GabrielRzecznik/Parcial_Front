@@ -14,6 +14,10 @@ function datosPerfil(){
     mostrarDatosUsuario(usu, cont);
 }
 
+function mostrarTablaAutomoviles(){
+    mostrarDatosUsuario(usu);
+}
+
 //Eliminar Usuario
 var botonEliminar = document.getElementById("eliminar");
 botonEliminar.addEventListener('click', eliminarUsuario);
