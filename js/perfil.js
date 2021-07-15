@@ -7,8 +7,9 @@ function load(){
 //#endregion
 
 //Simula ser el usuario
-var usu = "rzecznik@gmail.com";
-var cont = "Parcial2021";
+var usu = localStorage.getItem("correo");
+var cont = localStorage.getItem("contraseña");
+
 
 function datosPerfil(){
     mostrarDatosUsuario(usu, cont);
