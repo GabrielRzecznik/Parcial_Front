@@ -1,7 +1,7 @@
 function peticionPublicarAutovil(formulario){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+    formData.append("correo", usu);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
@@ -9,22 +9,18 @@ function peticionPublicarAutovil(formulario){
             if (xmlhttp.status == 200) {
                 var respuestaResivida = xmlhttp.responseText;
                 alert(respuestaResivida);
-                window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
             }else if (xmlhttp.status == 500) {
-                alert("El correo ingresado ya corresponde a una cuenta existente");
-                //Logo de carga
-                document.querySelector('#registrarse').classList.remove('invisible');
-                document.querySelector('#cargando').classList.add('invisible');
-                //Marcar Correo
-                document.getElementById('iconoCorreo').classList.remove('validado');
-                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
+                alert("La patente del automovil ingresado ya corresponde con la de un automovil publicado");
+                //Marcar Patente
+                document.getElementById('iconoPatente').classList.remove('validado');
+                document.querySelector('#iconoPatente').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoPatente').classList.remove('bi-check-circle-fill');
             }else{
                 alert("Fallo la conexión con el servidor!!");
             }
         }
     }
-    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Automovil/registrarUsuario',true);
+    xmlhttp.open("POST",'https://parcial-edi-backend.herokuapp.com/Automovil/publicarAutomovil/'+usu,true);
     xmlhttp.send(formJSON);
 }
 
