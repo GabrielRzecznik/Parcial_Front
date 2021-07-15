@@ -2,12 +2,12 @@
 window.addEventListener('load',load);
 
 //Simula ser el usuario
-var usu = localStorage.getItem("correo");
-var cont = localStorage.getItem("contraseña");
+var usu = localStorage.getItem("usuario");
+var cont = localStorage.getItem("password");
 
 function load(){
-    usu = localStorage.getItem("correo");
-    cont = localStorage.getItem("contraseña");
+    usu = localStorage.getItem("usuario");
+    cont = localStorage.getItem("password");
     datosPerfil();
 }
 //#endregion
