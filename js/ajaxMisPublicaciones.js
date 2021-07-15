@@ -38,7 +38,7 @@ function mostrarTablaAutomoviles(usuario){
         }
     }
     xmlhttp.open("GET",'https://parcial-edi-backend.herokuapp.com/Automoviles//buscarMiListaAutomovil'+propietario,false);
-    xmlhttp.send(formJSON);//No le mando
+    xmlhttp.send();//No le mando
 }
 //Asincronico
 mostrarTablaAutomoviles();
