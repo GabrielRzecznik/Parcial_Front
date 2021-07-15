@@ -438,9 +438,7 @@ function enviarPublicacion() {
            //Enviar AJAX
            peticionPublicarAutovil(formulario);
 
-           //Cargando
-           //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-           //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
+           window.location.href = 'https://parcial-edi-front.herokuapp.com/inicio.html';
        }else{
            alert("No se pudo subir la publicación");
        }
